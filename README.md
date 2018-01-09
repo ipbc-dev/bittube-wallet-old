@@ -46,7 +46,7 @@ ln -s ../ipbc cryptonote
 **3. Install dependencies. For example using Apt:**
 
 ```
-apt-get install -y libboost-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev
+apt-get install -y cmake libboost-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev
 ```
 
 **4. Build**
