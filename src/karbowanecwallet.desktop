@@ -1,0 +1,24 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Karbo
+GenericName=IPBC Wallet
+Name[uk]=Карбованeць
+Name[ru]=Карбованeц
+Name[pl]=Karbowaneć
+Name[be]=Карбованэць
+Name[de]=Karbo
+Name[es]=Karbo
+Comment=Karbovanets wallet
+Comment[uk]=Гаманець Карбованца
+Comment[ru]=Кошелек Карбованца
+Comment[pl]=Portfel Karbowańca
+Comment[be]=Кашалёк Карбованца
+Comment[de]=Karbo Brieftasche
+Comment[es]=Karbo Monedero
+Exec=IPBC %U
+Terminal=false
+Type=Application
+Icon=IPBC
+MimeType=x-scheme-handler/IPBC;
+Categories=Office;Finance;
+Version=1.2.0
