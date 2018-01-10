@@ -1575,7 +1575,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>IPBC Wallet %1</source>
-        <translation>Karbo Monedero %1</translation>
+        <translation>IPBC-Wallet %1</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -1591,7 +1591,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>IPBC Wallet</source>
-        <translation type="vanished">Karbo Monedero</translation>
+        <translation type="vanished">IPBC-Wallet</translation>
     </message>
     <message>
         <source>New transaction received</source>

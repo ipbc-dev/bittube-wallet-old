@@ -3,6 +3,10 @@ cmake_minimum_required(VERSION 2.8)
 include(CryptoNoteWallet.cmake)
 include(QREncode.cmake)
 
+if (APPLE)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
+endif(APPLE)
+
 project(${CN_PROJECT_NAME})
 
 execute_process(COMMAND git log -1 --pretty=format:%h
@@ -18,16 +22,17 @@ include_directories(${CMAKE_BINARY_DIR}
     cryptonote/src
     libqrencode)
 
+if(WIN32)
+  set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015_64")
+  set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x64-windows")
+  set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x64-windows\\lib")
+endif(WIN32)
+
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Network REQUIRED)
 
-set(Boost_USE_STATIC_LIBS ON)
-if(WIN32)
-  set(Boost_USE_STATIC_RUNTIME OFF)
-else(WIN32)
-  set(Boost_USE_STATIC_RUNTIME ON)
-endif(WIN32)
+set(Boost_USE_STATIC_LIBS OFF)
 
 find_package(Boost 1.55 REQUIRED COMPONENTS date_time filesystem program_options regex serialization system thread chrono)
 if ((${Boost_MAJOR_VERSION} EQUAL 1) AND (${Boost_MINOR_VERSION} EQUAL 54))

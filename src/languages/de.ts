@@ -1539,7 +1539,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>IPBC Wallet %1</source>
-        <translation>Karbo Brieftasche %1</translation>
+        <translation>IPBC-Wallet %1</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
