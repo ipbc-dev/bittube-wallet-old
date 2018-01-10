@@ -6,7 +6,7 @@ Compilation instructions
 **1. Clone wallet sources & Main repository**
 
 ```
-git clone https://github.com/ipbc-dev/ipbcwallet.git
+git clone https://github.com/ipbc-dev/ipbc-wallet.git
 git clone https://github.com/ipbc-dev/ipbc.git
 ```
 
@@ -33,7 +33,7 @@ mkdir build && cd build && cmake ..
 **1. Clone wallet sources & Main repository**
 
 ```
-git clone https://github.com/ipbc-dev/ipbcwallet.git
+git clone https://github.com/ipbc-dev/ipbc-wallet.git
 git clone https://github.com/ipbc-dev/ipbc.git
 ```
 
@@ -60,7 +60,7 @@ mkdir build && cd build && cmake .. && make
 **1. Clone wallet sources & Main repository**
 
 ```
-git clone https://github.com/ipbc-dev/ipbcwallet.git
+git clone https://github.com/ipbc-dev/ipbc-wallet.git
 git clone https://github.com/ipbc-dev/ipbc.git
 ```
 
