@@ -23,9 +23,15 @@ include_directories(${CMAKE_BINARY_DIR}
     libqrencode)
 
 if(WIN32)
-  set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015_64")
-  set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x64-windows")
-  set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x64-windows\\lib")
+  if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+      set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015_64")
+      set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x64-windows")
+      set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x64-windows\\lib")
+  elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+      set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015")
+      set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x86-windows")
+      set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x86-windows\\lib")
+  endif()
 endif(WIN32)
 
 find_package(Qt5Gui REQUIRED)
