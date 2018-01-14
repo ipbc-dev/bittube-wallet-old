@@ -40,7 +40,6 @@ SendFrame::SendFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::SendFrame
 
   m_ui->m_tickerLabel->setText(CurrencyAdapter::instance().getCurrencyTicker().toUpper());
   m_ui->m_feeSpin->setSuffix(" " + CurrencyAdapter::instance().getCurrencyTicker().toUpper());
-  m_ui->m_donateSpin->setSuffix(" " + CurrencyAdapter::instance().getCurrencyTicker().toUpper());
   m_ui->m_feeSpin->setMinimum(CurrencyAdapter::instance().formatAmount(CurrencyAdapter::instance().getMinimumFee()).toDouble());
   m_ui->m_remote_label->hide();
 
@@ -128,25 +127,7 @@ void SendFrame::amountValueChange() {
             remote_node_fee = 10000000000000;
         }
     }
-
-    QVector<float> donations;
-    donations.clear();
-    Q_FOREACH (TransferFrame * transfer, m_transfers) {
-      float amount = transfer->getAmountString().toFloat();
-      float donationpercent = amount * 0.1 / 100; // donation is 0.1%
-      donations.push_back(donationpercent);
-      }
-    float donation_amount = 0;
-    for(QVector<float>::iterator it = donations.begin(); it != donations.end(); ++it) {
-        donation_amount += *it;
-    }
-    float min = CurrencyAdapter::instance().formatAmount(CurrencyAdapter::instance().getMinimumFee()).toFloat();
-    if (donation_amount < min) {
-        donation_amount = min;
-    }
-    donation_amount = floor(donation_amount * pow(10., 4) + .5) / pow(10., 4);
-    m_ui->m_donateSpin->setValue(QString::number(donation_amount).toDouble());
-
+    
     if( !remote_node_fee_address.isEmpty() ) {
         quint64 actualBalance = WalletAdapter::instance().getActualBalance();
         if(actualBalance > remote_node_fee) {
@@ -253,14 +234,6 @@ void SendFrame::sendClicked() {
         if (!label.isEmpty()) {
           AddressBookModel::instance().addAddress(label, address, m_ui->m_paymentIdEdit->text().toUtf8());
         }
-      }
-
-      // Dev donation
-      if (m_ui->donateCheckBox->isChecked()) {
-          CryptoNote::WalletLegacyTransfer walletTransfer;
-          walletTransfer.address = "Kdev1L9V5ow3cdKNqDpLcFFxZCqu5W2GE9xMKewsB2pUXWxcXvJaUWHcSrHuZw91eYfQFzRtGfTemReSSMN4kE445i6Etb3";
-          walletTransfer.amount = CurrencyAdapter::instance().parseAmount(m_ui->m_donateSpin->cleanText());
-          walletTransfers.push_back(walletTransfer);
       }
 
       // Remote node fee

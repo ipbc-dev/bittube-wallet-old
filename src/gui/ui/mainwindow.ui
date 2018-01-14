@@ -158,7 +158,7 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="5">
+    <!--<item row="1" column="5">
      <widget class="WalletGui::MiningFrame" name="m_miningFrame">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -173,7 +173,7 @@
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-    </item>
+    </item>-->
     <item row="1" column="2">
      <widget class="WalletGui::ReceiveFrame" name="m_receiveFrame">
       <property name="sizePolicy">
@@ -244,7 +244,7 @@
     <addaction name="m_startOnLoginAction"/>
     <addaction name="m_minimizeToTrayAction"/>
     <addaction name="m_closeToTrayAction"/>
-    <addaction name="m_miningOnLaunchAction"/>
+    <!--<addaction name="m_miningOnLaunchAction"/>-->
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -320,7 +320,7 @@
    <addaction name="m_receiveAction"/>
    <addaction name="m_transactionsAction"/>
    <addaction name="m_addressBookAction"/>
-   <addaction name="m_miningAction"/>
+   <!--<addaction name="m_miningAction"/>-->
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="accountToolBar">
@@ -508,7 +508,7 @@
     <string>Import private key</string>
    </property>
   </action>
-  <action name="m_miningAction">
+  <!--<action name="m_miningAction">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -519,7 +519,7 @@
    <property name="text">
     <string>Mining</string>
    </property>
-  </action>
+  </action>-->
   <action name="m_resetAction">
    <property name="text">
     <string>Reset wallet</string>
@@ -607,14 +607,14 @@
     <string>Create nondeterministic wallet</string>
    </property>
   </action>
-  <action name="m_miningOnLaunchAction">
+  <!--<action name="m_miningOnLaunchAction">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
     <string>Start pool mining automatically</string>
    </property>
-  </action>
+  </action>-->
  </widget>
  <customwidgets>
   <customwidget>
@@ -647,12 +647,12 @@
    <header>gui/AddressBookFrame.h</header>
    <container>1</container>
   </customwidget>
-  <customwidget>
+  <!--<customwidget>
    <class>WalletGui::MiningFrame</class>
    <extends>QFrame</extends>
    <header>gui/MiningFrame.h</header>
    <container>1</container>
-  </customwidget>
+  </customwidget>-->
   <customwidget>
    <class>WalletGui::ReceiveFrame</class>
    <extends>QFrame</extends>
@@ -968,7 +968,7 @@
     </hint>
    </hints>
   </connection>
-  <connection>
+  <!--<connection>
    <sender>m_miningAction</sender>
    <signal>toggled(bool)</signal>
    <receiver>m_miningFrame</receiver>
@@ -983,7 +983,7 @@
      <y>322</y>
     </hint>
    </hints>
-  </connection>
+  </connection>-->
   <connection>
    <sender>m_addressBookAction</sender>
    <signal>toggled(bool)</signal>
@@ -1144,7 +1144,7 @@
     </hint>
    </hints>
   </connection>
-  <connection>
+  <!--<connection>
    <sender>m_miningOnLaunchAction</sender>
    <signal>triggered(bool)</signal>
    <receiver>MainWindow</receiver>
@@ -1159,7 +1159,7 @@
      <y>274</y>
     </hint>
    </hints>
-  </connection>
+  </connection>-->
  </connections>
  <slots>
   <slot>createWallet()</slot>

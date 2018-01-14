@@ -66,7 +66,7 @@ TransactionsFrame::TransactionsFrame(QWidget* _parent) : QFrame(_parent), m_ui(n
   m_ui->m_typeSelect->addItem(tr("All types"), AllTypes);
   m_ui->m_typeSelect->addItem(tr("Incoming"), Incoming);
   m_ui->m_typeSelect->addItem(tr("Outgoing"), Outgoing);
-  m_ui->m_typeSelect->addItem(tr("Mined"), Mining);
+  //m_ui->m_typeSelect->addItem(tr("Mined"), Mining);
   m_ui->m_typeSelect->addItem(tr("Sent to myself"), InOut);
 
   m_ui->m_dateRangeArea->addWidget(createDateRangeWidget());
@@ -313,9 +313,9 @@ void TransactionsFrame::chooseType(int idx)
     case Outgoing: {
         SortedTransactionsModel::instance().setTxType(2);
         } break;
-    case Mining:
-        SortedTransactionsModel::instance().setTxType(0);
-        break;
+    //case Mining:
+    //    SortedTransactionsModel::instance().setTxType(0);
+    //    break;
     case InOut:
         SortedTransactionsModel::instance().setTxType(3);
         break;

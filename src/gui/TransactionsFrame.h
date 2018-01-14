@@ -50,7 +50,7 @@ public:
           AllTypes,
           Incoming,
           Outgoing,
-          Mining,
+          //Mining,
           InOut
       };
 
