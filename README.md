@@ -57,23 +57,35 @@ mkdir build && cd build && cmake .. && make
 
 ### Mac OSX
 
-**1. Clone wallet sources & Main repository**
+**1. Install Git**
+
+```
+xcode-select —install
+```
+
+**2. Clone wallet sources & Main repository**
 
 ```
 git clone https://github.com/ipbc-dev/ipbc-wallet.git
 git clone https://github.com/ipbc-dev/ipbc.git
 ```
 
-**2. Create symbolic link to coin sources in the main directory. For example:**
+**3. Create symbolic link to coin sources in the main directory. For example:**
 
 ```
 ln -s ../ipbc cryptonote
 ```
 
-**3. Install Boost. For example using homebrew.**
+**4. Install Boost. For example using homebrew.**
 
 ```
 brew install boost
+```
+
+**5. Install cmake. For example using homebrew.**
+
+```
+brew install cmake
 ```
 
 **4. Install Qt 5.9: [download link](http://qt.io/download)**
