@@ -19,7 +19,6 @@ CryptoNoteWrapper.cpp \
 CurrencyAdapter.cpp \
 LoggerAdapter.cpp \
 main.cpp \
-Miner.cpp \
 NodeAdapter.cpp \
 Settings.cpp \
 SignalHandler.cpp \
@@ -36,7 +35,6 @@ gui/ChangePasswordDialog.cpp \
 gui/ExitWidget.cpp \
 gui/ImportKeyDialog.cpp \
 gui/MainWindow.cpp \
-gui/MiningFrame.cpp \
 gui/NewAddressDialog.cpp \
 gui/NewPasswordDialog.cpp \
 gui/NewPoolDialog.cpp \
@@ -73,7 +71,6 @@ HEADERS = CommandLineParser.h \
 CryptoNoteWrapper.h \
 CurrencyAdapter.h \
 LoggerAdapter.h \
-Miner.h \
 miniupnpcstrings.h \
 NodeAdapter.h \
 Settings.h \
@@ -91,7 +88,6 @@ gui/ChangePasswordDialog.h \
 gui/ExitWidget.h \
 gui/ImportKeyDialog.h \
 gui/MainWindow.h \
-gui/MiningFrame.h \
 gui/NewAddressDialog.h \
 gui/NewPasswordDialog.h \
 gui/NewPoolDialog.h \
@@ -132,7 +128,6 @@ gui/ui/changepassworddialog.ui \
 gui/ui/exitwidget.ui \
 gui/ui/importkeydialog.ui \
 gui/ui/mainwindow.ui \
-gui/ui/miningframe.ui \
 gui/ui/newaddressdialog.ui \
 gui/ui/newpassworddialog.ui \
 gui/ui/newpooldialog.ui \

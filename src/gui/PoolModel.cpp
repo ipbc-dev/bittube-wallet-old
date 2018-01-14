@@ -10,7 +10,7 @@
 namespace WalletGui {
 
 PoolModel::PoolModel(QObject* _parent) : QStringListModel(_parent) {
-  setStringList(Settings::instance().getMiningPoolList());
+  //setStringList(Settings::instance().getMiningPoolList());
 }
 
 PoolModel::~PoolModel() {
@@ -52,7 +52,7 @@ QVariant PoolModel::headerData(int _section, Qt::Orientation _orientation, int _
 
 bool PoolModel::setData(const QModelIndex& _index, const QVariant& _value, int _role) {
   bool res = QStringListModel::setData(_index, _value, _role);
-  Settings::instance().setMiningPoolList(stringList());
+  //Settings::instance().setMiningPoolList(stringList());
   return res;
 }
 
