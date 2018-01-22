@@ -22,6 +22,7 @@ include_directories(${CMAKE_BINARY_DIR}
     cryptonote/src
     libqrencode)
 
+
 if(WIN32)
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
       set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015_64")
@@ -32,6 +33,8 @@ if(WIN32)
       set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x86-windows")
       set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x86-windows\\lib")
   endif()
+elseif(APPLE)
+  set (CMAKE_PREFIX_PATH "/Users/David/qt/5.10.0/clang_64")
 endif(WIN32)
 
 find_package(Qt5Gui REQUIRED)
