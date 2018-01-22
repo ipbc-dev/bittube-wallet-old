@@ -386,9 +386,9 @@ public:
     m_core.set_cryptonote_protocol(&m_protocolHandler);
     m_protocolHandler.set_p2p_endpoint(&m_nodeServer);
     CryptoNote::Checkpoints checkpoints(logManager);
-    for (const CryptoNote::CheckpointData& checkpoint : CryptoNote::CHECKPOINTS) {
+    /* for (const CryptoNote::CheckpointData& checkpoint : CryptoNote::CHECKPOINTS) {
       checkpoints.add_checkpoint(checkpoint.height, checkpoint.blockId);
-    }
+    } */
   }
 
   ~InprocessNode() override {
