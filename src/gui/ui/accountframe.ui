@@ -117,7 +117,7 @@
    <string>Frame</string>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(246,246,246);</string>
@@ -170,19 +170,19 @@
         <widget class="QLabel" name="label">
          <property name="minimumSize">
           <size>
-           <width>149</width>
+           <width>120</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>149</width>
+           <width>120</width>
            <height>30</height>
           </size>
          </property>
          <property name="baseSize">
           <size>
-           <width>149</width>
+           <width>120</width>
            <height>30</height>
           </size>
          </property>
@@ -193,7 +193,7 @@
           <string notr="true">background-color: rgb(236,236,236);
 border: 1px solid lightgray;
 border-right: 0;
-margin-left: 19px;</string>
+margin-left: 5px;</string>
          </property>
          <property name="text">
           <string>YOUR ACCOUNT</string>
@@ -449,7 +449,7 @@ border-right: 0;</string>
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">margin-right: 19px;
+          <string notr="true">margin-right: 5px;
 padding-top:5px;
 background-color: white;
 border: 1px solid lightgray;
@@ -459,7 +459,7 @@ border-left: 0;</string>
           <string> IPBC</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="margin">
           <number>0</number>

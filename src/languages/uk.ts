@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Your account:</source>
-        <translation>Ваш рахунок:</translation>
+        <translation type="vanished">Ваш рахунок:</translation>
     </message>
     <message>
         <source>Your receiving address</source>
@@ -64,6 +64,10 @@
     </message>
     <message>
         <source>0.00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>YOUR ACCOUNT</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -510,7 +514,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Mining</source>
-        <translation>Карбування</translation>
+        <translation type="vanished">Карбування</translation>
     </message>
     <message>
         <source>Reset wallet</source>
@@ -598,38 +602,34 @@ Please wait...</source>
     </message>
     <message>
         <source>Start pool mining automatically</source>
-        <translation>Запускати карбування при старті</translation>
+        <translation type="vanished">Запускати карбування при старті</translation>
     </message>
 </context>
 <context>
     <name>MiningFrame</name>
-    <message>
-        <source>Frame</source>
-        <translation></translation>
-    </message>
     <message>
         <source>Mining status</source>
         <translation type="vanished">Стан карбування</translation>
     </message>
     <message>
         <source>CPU cores</source>
-        <translation>Ядра процесора</translation>
+        <translation type="vanished">Ядра процесора</translation>
     </message>
     <message>
         <source>Select pool</source>
-        <translation>Вибрати пул</translation>
+        <translation type="vanished">Вибрати пул</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Зупинено</translation>
+        <translation type="vanished">Зупинено</translation>
     </message>
     <message>
         <source>Add pool</source>
-        <translation>Додати пул</translation>
+        <translation type="vanished">Додати пул</translation>
     </message>
     <message>
         <source>Start mining</source>
-        <translation>Розпочати карбування</translation>
+        <translation type="vanished">Розпочати карбування</translation>
     </message>
     <message>
         <source>Pause mining</source>
@@ -637,19 +637,19 @@ Please wait...</source>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Налаштування</translation>
+        <translation type="vanished">Налаштування</translation>
     </message>
     <message>
         <source>Pool mining</source>
-        <translation>Карбування в пулі</translation>
+        <translation type="vanished">Карбування в пулі</translation>
     </message>
     <message>
         <source>Stop mining</source>
-        <translation>Зупинити карбування</translation>
+        <translation type="vanished">Зупинити карбування</translation>
     </message>
     <message>
         <source>Solo mining</source>
-        <translation>Карбування соло</translation>
+        <translation type="vanished">Карбування соло</translation>
     </message>
     <message>
         <source>Status</source>
@@ -657,11 +657,11 @@ Please wait...</source>
     </message>
     <message>
         <source>Remove pool</source>
-        <translation>Видалити пул</translation>
+        <translation type="vanished">Видалити пул</translation>
     </message>
     <message>
         <source>Mining status:</source>
-        <translation>Стан карбування:</translation>
+        <translation type="vanished">Стан карбування:</translation>
     </message>
 </context>
 <context>
@@ -1041,7 +1041,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Donate 0.1% to development fund:</source>
-        <translation>Зробити внесок 0,1% на розвиток:</translation>
+        <translation type="vanished">Зробити внесок 0,1% на розвиток:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
@@ -1531,8 +1531,8 @@ Are you sure?</source>
         <translation type="vanished">Карбованець в. %2 (%1)</translation>
     </message>
     <message>
-        <source>More info can be found at www.IPBC.com in Documentation section</source>
-        <translation>Більше інформації на сайті www.IPBC.com у розділі Документація.</translation>
+        <source>More info can be found at IPBC.io in Documentation section</source>
+        <translation>Більше інформації на сайті IPBC.io у розділі Документація.</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1647,27 +1647,27 @@ Are you sure?</source>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Помилка: %1</translation>
+        <translation type="vanished">Помилка: %1</translation>
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Запуск...</translation>
+        <translation type="vanished">Запуск...</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Зупинено</translation>
+        <translation type="vanished">Зупинено</translation>
     </message>
     <message>
         <source>Mining solo. Hashrate: %1 H/s</source>
-        <translation>Карбую соло. Швидкість: %1 H/s</translation>
+        <translation type="vanished">Карбую соло. Швидкість: %1 H/s</translation>
     </message>
     <message>
         <source>Starting solo minining...</source>
-        <translation>Запуск карбування соло...</translation>
+        <translation type="vanished">Запуск карбування соло...</translation>
     </message>
     <message>
         <source>Mining in pool. Hashrate: %1 H/s</source>
-        <translation>Карбування в пулі. Швидкість: %1 H/s</translation>
+        <translation type="vanished">Карбування в пулі. Швидкість: %1 H/s</translation>
     </message>
 </context>
 <context>
@@ -1870,7 +1870,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>Mined</source>
-        <translation>Викарбувані</translation>
+        <translation type="vanished">Викарбувані</translation>
     </message>
     <message>
         <source>Sent to myself</source>

@@ -20,7 +20,7 @@
     <name>AccountFrame</name>
     <message>
         <source>Address:</source>
-        <translation>Adresse:</translation>
+        <translation type="vanished">Adresse:</translation>
     </message>
     <message>
         <source>...</source>
@@ -28,11 +28,11 @@
     </message>
     <message>
         <source>Show private key</source>
-        <translation>Zeige Privaten Schlüssel</translation>
+        <translation type="vanished">Zeige Privaten Schlüssel</translation>
     </message>
     <message>
         <source>Your account:</source>
-        <translation>Dein Account:</translation>
+        <translation type="vanished">Dein Account:</translation>
     </message>
     <message>
         <source>Your receiving address</source>
@@ -66,6 +66,10 @@
         <source>0.00</source>
         <translation>0.00</translation>
     </message>
+    <message>
+        <source>YOUR ACCOUNT</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AddressBookDialog</name>
@@ -86,11 +90,11 @@
     </message>
     <message>
         <source>New address</source>
-        <translation>Neue Adresse</translation>
+        <translation type="vanished">Neue Adresse</translation>
     </message>
     <message>
         <source>Delete address</source>
-        <translation>Adresse löschen</translation>
+        <translation type="vanished">Adresse löschen</translation>
     </message>
     <message>
         <source>Copy address</source>
@@ -110,7 +114,7 @@
     </message>
     <message>
         <source>Copy Payment ID</source>
-        <translation>Payment ID kopieren</translation>
+        <translation>Zahlungs-ID kopieren</translation>
     </message>
 </context>
 <context>
@@ -123,13 +127,41 @@
         <source>Select language:</source>
         <translation>Sprache wählen:</translation>
     </message>
-	<message>
+    <message>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Українська</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Русский</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polski</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Беларуская</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deutsch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Español</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -167,11 +199,11 @@
     <name>ConfirmSendDialog</name>
     <message>
         <source>Comfirm sending %1 IPBC</source>
-        <translation>Senden bestätigen %1 IPBC</translation>
+        <translation type="vanished">Senden bestätigen %1 IPBC</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 IPBC&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bist du sicher das du den Betrag senden möchtest&lt;strong&gt;%1 IPBC&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
+        <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sind Sie sicher das Sie den Betrag senden möchtest&lt;strong&gt;%1 IPBC&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 IPBC&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -181,6 +213,10 @@
     <message>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <source>Confirm sending %1 IPBC</source>
+        <translation type="unfinished">Bestätige senden %1 IPBC</translation>
     </message>
 </context>
 <context>
@@ -435,7 +471,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Address Book</source>
-        <translation>Adressbuch</translation>
+        <translation type="vanished">Adressbuch</translation>
     </message>
     <message>
         <source>Create wallet</source>
@@ -483,7 +519,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Mining</source>
-        <translation>Mining</translation>
+        <translation type="vanished">Mining</translation>
     </message>
     <message>
         <source>Reset wallet</source>
@@ -503,7 +539,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Show private key</source>
-        <translation>Privaten Schlüssel anzeigen</translation>
+        <translation type="vanished">Privaten Schlüssel anzeigen</translation>
     </message>
     <message>
         <source>F1</source>
@@ -547,11 +583,11 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Status</translation>
+        <translation type="vanished">Status</translation>
     </message>
     <message>
         <source>Tools</source>
-        <translation>Werkzeuge</translation>
+        <translation type="vanished">Werkzeuge</translation>
     </message>
     <message>
         <source>Open log file</source>
@@ -571,70 +607,70 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Start pool mining automatically</source>
-        <translation>Pool mining automatisch starten</translation>
+        <translation type="vanished">Pool mining automatisch starten</translation>
     </message>
 </context>
 <context>
     <name>MiningFrame</name>
     <message>
         <source>Frame</source>
-        <translation>Frame</translation>
+        <translation type="vanished">Frame</translation>
     </message>
     <message>
         <source>Mining status</source>
-        <translation>Mining Status</translation>
+        <translation type="vanished">Mining Status</translation>
     </message>
     <message>
         <source>CPU cores</source>
-        <translation>CPU Kerne</translation>
+        <translation type="vanished">CPU Kerne</translation>
     </message>
     <message>
         <source>Select pool</source>
-        <translation>Pool auswählen</translation>
+        <translation type="vanished">Pool auswählen</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Gestoppt</translation>
+        <translation type="vanished">Gestoppt</translation>
     </message>
     <message>
         <source>Add pool</source>
-        <translation>Pool hinzufügen</translation>
+        <translation type="vanished">Pool hinzufügen</translation>
     </message>
     <message>
         <source>Start mining</source>
-        <translation>Mining starten</translation>
+        <translation type="vanished">Mining starten</translation>
     </message>
     <message>
         <source>Pause mining</source>
-        <translation>Mining pausieren</translation>
+        <translation type="vanished">Mining pausieren</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Einstellungen</translation>
+        <translation type="vanished">Einstellungen</translation>
     </message>
     <message>
         <source>Pool mining</source>
-        <translation>Pool mining</translation>
+        <translation type="vanished">Pool mining</translation>
     </message>
     <message>
         <source>Stop mining</source>
-        <translation>Mining stoppen</translation>
+        <translation type="vanished">Mining stoppen</translation>
     </message>
     <message>
         <source>Solo mining</source>
-        <translation>Solo mining</translation>
+        <translation type="vanished">Solo mining</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Status</translation>
+        <translation type="vanished">Status</translation>
     </message>
     <message>
         <source>Remove pool</source>
-        <translation>Pool entfernen</translation>
+        <translation type="vanished">Pool entfernen</translation>
     </message>
     <message>
         <source>Mining status:</source>
-        <translation>Mining status:</translation>
+        <translation type="vanished">Mining status:</translation>
     </message>
 </context>
 <context>
@@ -676,7 +712,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>PaymentID:</source>
-        <translation>PaymentID:</translation>
+        <translation>Zahlungs-ID:</translation>
     </message>
 </context>
 <context>
@@ -783,7 +819,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Wallet</source>
-        <translation>Brieftasche</translation>
+        <translation type="vanished">Brieftasche</translation>
     </message>
     <message>
         <source>Unconfirmed:</source>
@@ -791,7 +827,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>Balance:</source>
-        <translation>Guthaben:</translation>
+        <translation type="vanished">Guthaben:</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -848,7 +884,7 @@ Bitte warten...</translation>
     </message>
     <message>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
     <message>
         <source>Copy key</source>
@@ -916,7 +952,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Enter a label for this payer</source>
-        <translation>Geben Sie ein Label für diesen Zahler ein</translation>
+        <translation type="vanished">Geben Sie ein Label für diesen Zahler ein</translation>
     </message>
     <message>
         <source>Amount:</source>
@@ -924,11 +960,11 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>PaymentID:</source>
-        <translation>PaymentID:</translation>
+        <translation>Zahlungs-ID:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
-        <translation>Payment ID generieren</translation>
+        <translation>Zahlungs-ID generieren</translation>
     </message>
     <message>
         <source>Create payment request</source>
@@ -981,12 +1017,12 @@ Möchten Sie die Download Seite besuchen?</translation>
         <translation>Frame</translation>
     </message>
     <message>
-        <source>Anonimity level:</source>
-        <translation>Anonimity Level:</translation>
+        <source>Anonymity level:</source>
+        <translation>Anonymitätslevel:</translation>
     </message>
     <message>
         <source>PaymentID:</source>
-        <translation>PaymentID:</translation>
+        <translation>Zahlungs-ID:</translation>
     </message>
     <message>
         <source>Send</source>
@@ -1002,7 +1038,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Balance:</source>
-        <translation>Guthaben:</translation>
+        <translation type="vanished">Guthaben:</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -1014,11 +1050,11 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Donate 0.1% to development fund:</source>
-        <translation>0,1% an den Entwickler spenden:</translation>
+        <translation type="vanished">0,1% an den Entwickler spenden:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
-        <translation>Generate Payment ID</translation>
+        <translation>Generate Zahlungs-ID</translation>
     </message>
     <message>
         <source>Wallet is connected through remote node. Additional 0.25% fee will be applied.</source>
@@ -1098,7 +1134,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Search for address, amount, transaction hash or Payment ID</source>
-        <translation>Adresse suchen, Menge, Transaktions Hash oder Payment ID</translation>
+        <translation>Adresse suchen, Menge, Transaktions Hash oder Zahlungs-ID</translation>
     </message>
     <message>
         <source>Reset filter</source>
@@ -1129,11 +1165,11 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Label:</source>
-        <translation>Label:</translation>
+        <translation type="vanished">Label:</translation>
     </message>
     <message>
         <source>Add to Contacts:</source>
-        <translation>Zu Kontakte hinzufügen:</translation>
+        <translation type="vanished">Zu Kontakte hinzufügen:</translation>
     </message>
     <message>
         <source>Select recipient from Address Book</source>
@@ -1145,7 +1181,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Save to Contacts:</source>
-        <translation>Zu Kontakte speichern:</translation>
+        <translation type="vanished">Zu Kontakte speichern:</translation>
     </message>
     <message>
         <source>Save to Contacts as:</source>
@@ -1205,11 +1241,11 @@ Möchten Sie die Download Seite besuchen?</translation>
     <name>WalletGui::AccountFrame</name>
     <message>
         <source>Hide private keys</source>
-        <translation>Privaten Schlüssel verbergen</translation>
+        <translation type="vanished">Privaten Schlüssel verbergen</translation>
     </message>
     <message>
         <source>Show private keys</source>
-        <translation>Zeige privaten Schlüssel</translation>
+        <translation type="vanished">Zeige privaten Schlüssel</translation>
     </message>
     <message>
         <source>Copied to clipboard</source>
@@ -1224,7 +1260,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Invalid payment ID</source>
-        <translation>Ungültige Payment ID</translation>
+        <translation>Ungültige Zahlungs-ID</translation>
     </message>
     <message>
         <source>Edit contact</source>
@@ -1232,7 +1268,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Contact with such label and address already exists.</source>
-        <translation>Ein Kontakt mit diesem Label und Adresse existiert bereits.</translation>
+        <translation type="vanished">Ein Kontakt mit diesem Label und Adresse existiert bereits.</translation>
     </message>
     <message>
         <source>Copy &amp;label</source>
@@ -1240,7 +1276,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>Copy Payment &amp;ID</source>
-        <translation>Payment &amp;ID kopieren</translation>
+        <translation>Zahlungs &amp;ID kopieren</translation>
     </message>
     <message>
         <source>Copy &amp;address</source>
@@ -1271,7 +1307,7 @@ Möchten Sie die Download Seite besuchen?</translation>
     </message>
     <message>
         <source>PaymentID</source>
-        <translation>PaymentID</translation>
+        <translation>Zahlungs-ID</translation>
     </message>
 </context>
 <context>
@@ -1367,11 +1403,11 @@ Externer Port für das P2P-Netzwerkprotokoll (wenn Portweiterleitung mit NAT ver
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zahlungs-ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;without Payment ID&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sind sie sicher das sie senden möchten &lt;strong&gt;ohne Payment ID&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sind sie sicher das sie senden möchten &lt;strong&gt;ohne Zahlungs-ID&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1460,7 +1496,7 @@ Externer Port für das P2P-Netzwerkprotokoll (wenn Portweiterleitung mit NAT ver
         <source>Your wallet will be reset and restored from blockchain.
 Are you sure?</source>
         <translation>Ihre Brieftasche wird zurückgesetzt und aus der Blockchain wiederhergestellt.
-Bist du sicher?</translation>
+Sind Sie sicher?</translation>
     </message>
     <message>
         <source>Wallet error</source>
@@ -1480,7 +1516,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>%1 peers</source>
-        <translation>%1 peers</translation>
+        <translation type="vanished">%1 peers</translation>
     </message>
     <message>
         <source>Synchronization in progress</source>
@@ -1504,11 +1540,11 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>%1 Wallet %2</source>
-        <translation>%1 Brieftasche %2</translation>
+        <translation type="vanished">%1 Brieftasche %2</translation>
     </message>
     <message>
-        <source>More info can be found at www.IPBC.com in Documentation section</source>
-        <translation>Weitere Informationen finden Sie unter www.IPBC.com im Abschnitt Dokumentation</translation>
+        <source>More info can be found at IPBC.io in Documentation section</source>
+        <translation>Weitere Informationen finden Sie unter IPBC.io im Abschnitt Dokumentation</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1520,7 +1556,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>Account toolbar</source>
-        <translation>Kontenleiste</translation>
+        <translation type="vanished">Kontenleiste</translation>
     </message>
     <message>
         <source>Tracking wallet. Spending unawailable</source>
@@ -1551,15 +1587,15 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>Total amount: %1, hash: %2</source>
-        <translation>Total Betrag: %1, hash: %2</translation>
+        <translation type="vanished">Total Betrag: %1, hash: %2</translation>
     </message>
     <message>
         <source>IPBC Wallet</source>
-        <translation>IPBC Wallet</translation>
+        <translation type="vanished">IPBC Wallet</translation>
     </message>
     <message>
         <source>New transaction received</source>
-        <translation>Neue Transaktion empfangen</translation>
+        <translation type="vanished">Neue Transaktion empfangen</translation>
     </message>
     <message>
         <source>Mnemonic seed is not correct</source>
@@ -1618,31 +1654,31 @@ Bist du sicher?</translation>
     <name>WalletGui::MiningFrame</name>
     <message>
         <source>Mining. Hashrate: %1 H/s</source>
-        <translation>Mining. Hashrate: %1 H/s</translation>
+        <translation type="vanished">Mining. Hashrate: %1 H/s</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Fehler: %1</translation>
+        <translation type="vanished">Fehler: %1</translation>
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Starten...</translation>
+        <translation type="vanished">Starten...</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Gestoppt</translation>
+        <translation type="vanished">Gestoppt</translation>
     </message>
     <message>
         <source>Mining solo. Hashrate: %1 H/s</source>
-        <translation>Mining solo. Hashrate: %1 H/s</translation>
+        <translation type="vanished">Mining solo. Hashrate: %1 H/s</translation>
     </message>
     <message>
         <source>Starting solo minining...</source>
-        <translation>Starte solo minining...</translation>
+        <translation type="vanished">Starte solo minining...</translation>
     </message>
     <message>
         <source>Mining in pool. Hashrate: %1 H/s</source>
-        <translation>Mining in pool. Hashrate: %1 H/s</translation>
+        <translation type="vanished">Mining in pool. Hashrate: %1 H/s</translation>
     </message>
 </context>
 <context>
@@ -1685,7 +1721,7 @@ Bist du sicher?</translation>
     <name>WalletGui::ReceiveFrame</name>
     <message>
         <source>New PNG file</source>
-        <translation>Neue PNG Datei</translation>
+        <translation type="vanished">Neue PNG Datei</translation>
     </message>
     <message>
         <source>Save QR Code</source>
@@ -1715,7 +1751,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>Invalid payment ID</source>
-        <translation>Falsche Payment ID</translation>
+        <translation>Falsche Zahlungs-ID</translation>
     </message>
     <message>
         <source>Payment request should start with IPBC:</source>
@@ -1749,7 +1785,7 @@ Bist du sicher?</translation>
 &lt;span style=&quot; font-weight:600;&quot;&gt;An: &lt;/span&gt;%4&lt;/p&gt;&lt;br&gt;
 &lt;span style=&quot; font-weight:600;&quot;&gt;Menge: &lt;/span&gt;%5&lt;/p&gt;&lt;br&gt;
 &lt;span style=&quot; font-weight:600;&quot;&gt;Gebühr: &lt;/span&gt;%6&lt;/p&gt;&lt;br&gt;
-&lt;span style=&quot; font-weight:600;&quot;&gt;Payment ID: &lt;/span&gt;%7&lt;/p&gt;&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Zahlungs-ID: &lt;/span&gt;%7&lt;/p&gt;&lt;br&gt;
 &lt;span style=&quot; font-weight:600;&quot;&gt;Transaktions hash: &lt;/span&gt;%8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -1784,7 +1820,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>Copy Payment &amp;ID</source>
-        <translation>Kopieren Payment &amp;ID</translation>
+        <translation>Kopieren Zahlungs &amp;ID</translation>
     </message>
     <message>
         <source>Show &amp;details</source>
@@ -1844,7 +1880,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>Mined</source>
-        <translation>Mined</translation>
+        <translation type="vanished">Mined</translation>
     </message>
     <message>
         <source>Sent to myself</source>
@@ -1875,7 +1911,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>PaymentID</source>
-        <translation>PaymentID</translation>
+        <translation>Zahlungs-ID</translation>
     </message>
     <message>
         <source>me (%1)</source>
@@ -1962,7 +1998,7 @@ Bist du sicher?</translation>
     </message>
     <message>
         <source>  Warning: last block was received %1 hours %2 minutes ago</source>
-        <translation>  Warnung: letzter Block wurde %1 Stunden %2 Minuten empfangen</translation>
+        <translation>  Warnung: letzter Block wurde vor %1 Stunde(n) und %2 Minute(n) empfangen</translation>
     </message>
     <message>
         <source>Object was not initialized</source>
@@ -2078,7 +2114,7 @@ Kann keinen neuen Schlüssel generieren</translation>
     </message>
     <message>
         <source>Wrong payment id format</source>
-        <translation>Falsches payment id Format</translation>
+        <translation>Falsches Zahlungs-ID Format</translation>
     </message>
     <message>
         <source>Wrong transaction extra format</source>

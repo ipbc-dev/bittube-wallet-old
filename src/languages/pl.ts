@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Your account:</source>
-        <translation>Twoje konto:</translation>
+        <translation type="vanished">Twoje konto:</translation>
     </message>
     <message>
         <source>Your receiving address</source>
@@ -64,6 +64,10 @@
     </message>
     <message>
         <source>0.00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>YOUR ACCOUNT</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -510,7 +514,7 @@ Proszę czekać...</translation>
     </message>
     <message>
         <source>Mining</source>
-        <translation>Karbowanie</translation>
+        <translation type="vanished">Karbowanie</translation>
     </message>
     <message>
         <source>Reset wallet</source>
@@ -598,38 +602,34 @@ Proszę czekać...</translation>
     </message>
     <message>
         <source>Start pool mining automatically</source>
-        <translation>Uruchamiać karbowanie automatycznie</translation>
+        <translation type="vanished">Uruchamiać karbowanie automatycznie</translation>
     </message>
 </context>
 <context>
     <name>MiningFrame</name>
-    <message>
-        <source>Frame</source>
-        <translation></translation>
-    </message>
     <message>
         <source>Mining status</source>
         <translation type="vanished">Stan karbowania</translation>
     </message>
     <message>
         <source>CPU cores</source>
-        <translation>Rdzenie CPU</translation>
+        <translation type="vanished">Rdzenie CPU</translation>
     </message>
     <message>
         <source>Select pool</source>
-        <translation>Wybierz kopalnię</translation>
+        <translation type="vanished">Wybierz kopalnię</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Zatrzymano</translation>
+        <translation type="vanished">Zatrzymano</translation>
     </message>
     <message>
         <source>Add pool</source>
-        <translation>Dodaj kopalnię</translation>
+        <translation type="vanished">Dodaj kopalnię</translation>
     </message>
     <message>
         <source>Start mining</source>
-        <translation>Zacznij karbować</translation>
+        <translation type="vanished">Zacznij karbować</translation>
     </message>
     <message>
         <source>Pause mining</source>
@@ -637,19 +637,19 @@ Proszę czekać...</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Ustawienia</translation>
+        <translation type="vanished">Ustawienia</translation>
     </message>
     <message>
         <source>Pool mining</source>
-        <translation>Karbowanie w kopalni</translation>
+        <translation type="vanished">Karbowanie w kopalni</translation>
     </message>
     <message>
         <source>Stop mining</source>
-        <translation>Zatrzymaj karbowanie</translation>
+        <translation type="vanished">Zatrzymaj karbowanie</translation>
     </message>
     <message>
         <source>Solo mining</source>
-        <translation>Karbowanie solo</translation>
+        <translation type="vanished">Karbowanie solo</translation>
     </message>
     <message>
         <source>Status</source>
@@ -657,11 +657,11 @@ Proszę czekać...</translation>
     </message>
     <message>
         <source>Remove pool</source>
-        <translation>Usuń kopalnię</translation>
+        <translation type="vanished">Usuń kopalnię</translation>
     </message>
     <message>
         <source>Mining status:</source>
-        <translation>Stan karbowania:</translation>
+        <translation type="vanished">Stan karbowania:</translation>
     </message>
 </context>
 <context>
@@ -1037,7 +1037,7 @@ Czy chesz otworzyć stronę pobierania w przeglądarce?</translation>
     </message>
     <message>
         <source>Donate 0.1% to development fund:</source>
-        <translation>Wpłać 0,1% do funduszu rozwoju:</translation>
+        <translation type="vanished">Wpłać 0,1% do funduszu rozwoju:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
@@ -1538,8 +1538,8 @@ Jesteś pewien?</translation>
         <translation type="vanished">%1waniec v. %2</translation>
     </message>
     <message>
-        <source>More info can be found at www.IPBC.com in Documentation section</source>
-        <translation>Więcej informacji można znaleźć na stronie www.IPBC.com w sekcji Dokumentacja</translation>
+        <source>More info can be found at IPBC.io in Documentation section</source>
+        <translation>Więcej informacji można znaleźć na stronie IPBC.io w sekcji Dokumentacja</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1662,27 +1662,27 @@ Jesteś pewien?</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Błąd: %1</translation>
+        <translation type="vanished">Błąd: %1</translation>
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Uruchamiam...</translation>
+        <translation type="vanished">Uruchamiam...</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Zatrzymano</translation>
+        <translation type="vanished">Zatrzymano</translation>
     </message>
     <message>
         <source>Mining solo. Hashrate: %1 H/s</source>
-        <translation>Trwa karbowanie solo. Hashrate: %1 H/s</translation>
+        <translation type="vanished">Trwa karbowanie solo. Hashrate: %1 H/s</translation>
     </message>
     <message>
         <source>Starting solo minining...</source>
-        <translation>Uruchamia się karbowanie solo...</translation>
+        <translation type="vanished">Uruchamia się karbowanie solo...</translation>
     </message>
     <message>
         <source>Mining in pool. Hashrate: %1 H/s</source>
-        <translation>Trwa karbowanie w kopalni. Hashrate: %1 H/s</translation>
+        <translation type="vanished">Trwa karbowanie w kopalni. Hashrate: %1 H/s</translation>
     </message>
 </context>
 <context>
@@ -1885,7 +1885,7 @@ Jesteś pewien?</translation>
     </message>
     <message>
         <source>Mined</source>
-        <translation>Zdobyte</translation>
+        <translation type="vanished">Zdobyte</translation>
     </message>
     <message>
         <source>Sent to myself</source>

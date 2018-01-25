@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Your account:</source>
-        <translation>Ваш счет:</translation>
+        <translation type="vanished">Ваш счет:</translation>
     </message>
     <message>
         <source>Your receiving address</source>
@@ -64,6 +64,10 @@
     </message>
     <message>
         <source>0.00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>YOUR ACCOUNT</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -510,7 +514,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Mining</source>
-        <translation>Майнинг</translation>
+        <translation type="vanished">Майнинг</translation>
     </message>
     <message>
         <source>Reset wallet</source>
@@ -598,38 +602,34 @@ Please wait...</source>
     </message>
     <message>
         <source>Start pool mining automatically</source>
-        <translation>Запускать майнинг при старте</translation>
+        <translation type="vanished">Запускать майнинг при старте</translation>
     </message>
 </context>
 <context>
     <name>MiningFrame</name>
-    <message>
-        <source>Frame</source>
-        <translation></translation>
-    </message>
     <message>
         <source>Mining status</source>
         <translation type="vanished">Состояние майнинга</translation>
     </message>
     <message>
         <source>CPU cores</source>
-        <translation>Ядра CPU</translation>
+        <translation type="vanished">Ядра CPU</translation>
     </message>
     <message>
         <source>Select pool</source>
-        <translation>Выбрать пул</translation>
+        <translation type="vanished">Выбрать пул</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Остановлен</translation>
+        <translation type="vanished">Остановлен</translation>
     </message>
     <message>
         <source>Add pool</source>
-        <translation>Добавить пул</translation>
+        <translation type="vanished">Добавить пул</translation>
     </message>
     <message>
         <source>Start mining</source>
-        <translation>Начать майнинг</translation>
+        <translation type="vanished">Начать майнинг</translation>
     </message>
     <message>
         <source>Pause mining</source>
@@ -637,19 +637,19 @@ Please wait...</source>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation type="vanished">Настройки</translation>
     </message>
     <message>
         <source>Pool mining</source>
-        <translation>Майнинг в пуле</translation>
+        <translation type="vanished">Майнинг в пуле</translation>
     </message>
     <message>
         <source>Stop mining</source>
-        <translation>Остановить майнинг</translation>
+        <translation type="vanished">Остановить майнинг</translation>
     </message>
     <message>
         <source>Solo mining</source>
-        <translation>Майнинг соло</translation>
+        <translation type="vanished">Майнинг соло</translation>
     </message>
     <message>
         <source>Status</source>
@@ -657,11 +657,11 @@ Please wait...</source>
     </message>
     <message>
         <source>Remove pool</source>
-        <translation>Удалить пул</translation>
+        <translation type="vanished">Удалить пул</translation>
     </message>
     <message>
         <source>Mining status:</source>
-        <translation>Состояние майнинга:</translation>
+        <translation type="vanished">Состояние майнинга:</translation>
     </message>
 </context>
 <context>
@@ -1037,7 +1037,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Donate 0.1% to development fund:</source>
-        <translation>Пожертвуйте 0,1% в фонд разработки:</translation>
+        <translation type="vanished">Пожертвуйте 0,1% в фонд разработки:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
@@ -1527,8 +1527,8 @@ Are you sure?</source>
         <translation type="vanished">Карбованец в. %2 (%1)</translation>
     </message>
     <message>
-        <source>More info can be found at www.IPBC.com in Documentation section</source>
-        <translation>Больше информации на сайте www.IPBC.com в разделе Документация.</translation>
+        <source>More info can be found at IPBC.io in Documentation section</source>
+        <translation>Больше информации на сайте IPBC.io в разделе Документация.</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1651,27 +1651,27 @@ Are you sure?</source>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Ошибка: %1</translation>
+        <translation type="vanished">Ошибка: %1</translation>
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Запуск...</translation>
+        <translation type="vanished">Запуск...</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Остановлен</translation>
+        <translation type="vanished">Остановлен</translation>
     </message>
     <message>
         <source>Mining solo. Hashrate: %1 H/s</source>
-        <translation>Майнинг соло. Скорость: %1 H/s</translation>
+        <translation type="vanished">Майнинг соло. Скорость: %1 H/s</translation>
     </message>
     <message>
         <source>Starting solo minining...</source>
-        <translation>Запуск майнинга соло...</translation>
+        <translation type="vanished">Запуск майнинга соло...</translation>
     </message>
     <message>
         <source>Mining in pool. Hashrate: %1 H/s</source>
-        <translation>Майнинг в пуле. Скорость: %1 H/s</translation>
+        <translation type="vanished">Майнинг в пуле. Скорость: %1 H/s</translation>
     </message>
 </context>
 <context>
@@ -1874,7 +1874,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>Mined</source>
-        <translation>Добытые</translation>
+        <translation type="vanished">Добытые</translation>
     </message>
     <message>
         <source>Sent to myself</source>

@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Your account:</source>
-        <translation>Su cuenta:</translation>
+        <translation type="vanished">Su cuenta:</translation>
     </message>
     <message>
         <source>Your receiving address</source>
@@ -65,6 +65,10 @@
     <message>
         <source>0.00</source>
         <translation>0.00</translation>
+    </message>
+    <message>
+        <source>YOUR ACCOUNT</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -516,7 +520,7 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Mining</source>
-        <translation>Mining</translation>
+        <translation type="vanished">Mining</translation>
     </message>
     <message>
         <source>Reset wallet</source>
@@ -604,14 +608,14 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Start pool mining automatically</source>
-        <translation>Comencar pool mining automáticamente</translation>
+        <translation type="vanished">Comencar pool mining automáticamente</translation>
     </message>
 </context>
 <context>
     <name>MiningFrame</name>
     <message>
         <source>Frame</source>
-        <translation>Marco</translation>
+        <translation type="vanished">Marco</translation>
     </message>
     <message>
         <source>Mining status</source>
@@ -619,23 +623,23 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>CPU cores</source>
-        <translation>Núcleos de CPU</translation>
+        <translation type="vanished">Núcleos de CPU</translation>
     </message>
     <message>
         <source>Select pool</source>
-        <translation>Seleccionar pool</translation>
+        <translation type="vanished">Seleccionar pool</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Detenido</translation>
+        <translation type="vanished">Detenido</translation>
     </message>
     <message>
         <source>Add pool</source>
-        <translation>Añadir pool</translation>
+        <translation type="vanished">Añadir pool</translation>
     </message>
     <message>
         <source>Start mining</source>
-        <translation>Empezar mining</translation>
+        <translation type="vanished">Empezar mining</translation>
     </message>
     <message>
         <source>Pause mining</source>
@@ -643,19 +647,19 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Configuraciones</translation>
+        <translation type="vanished">Configuraciones</translation>
     </message>
     <message>
         <source>Pool mining</source>
-        <translation>Pool mining</translation>
+        <translation type="vanished">Pool mining</translation>
     </message>
     <message>
         <source>Stop mining</source>
-        <translation>Detener mining</translation>
+        <translation type="vanished">Detener mining</translation>
     </message>
     <message>
         <source>Solo mining</source>
-        <translation>Solo mining</translation>
+        <translation type="vanished">Solo mining</translation>
     </message>
     <message>
         <source>Status</source>
@@ -663,11 +667,11 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Remove pool</source>
-        <translation>Eliminar pool</translation>
+        <translation type="vanished">Eliminar pool</translation>
     </message>
     <message>
         <source>Mining status:</source>
-        <translation>Mining estatus:</translation>
+        <translation type="vanished">Mining estatus:</translation>
     </message>
 </context>
 <context>
@@ -1051,7 +1055,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Donate 0.1% to development fund:</source>
-        <translation>Donar 0.1% al fondo de desarrollo:</translation>
+        <translation type="vanished">Donar 0.1% al fondo de desarrollo:</translation>
     </message>
     <message>
         <source>Generate Payment ID</source>
@@ -1543,8 +1547,8 @@ Are you sure?</source>
         <translation type="vanished">%1 Monedero %2</translation>
     </message>
     <message>
-        <source>More info can be found at www.IPBC.com in Documentation section</source>
-        <translation>Se puede encontrar más información en www.IPBC.com en la sección Documentación</translation>
+        <source>More info can be found at IPBC.io in Documentation section</source>
+        <translation>Se puede encontrar más información en IPBC.io en la sección Documentación</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1658,27 +1662,27 @@ Are you sure?</source>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Error: %1</translation>
+        <translation type="vanished">Error: %1</translation>
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Iniciando...</translation>
+        <translation type="vanished">Iniciando...</translation>
     </message>
     <message>
         <source>Stopped</source>
-        <translation>Detenido</translation>
+        <translation type="vanished">Detenido</translation>
     </message>
     <message>
         <source>Mining solo. Hashrate: %1 H/s</source>
-        <translation>Mining solo. Tasa de hash: %1 H/s</translation>
+        <translation type="vanished">Mining solo. Tasa de hash: %1 H/s</translation>
     </message>
     <message>
         <source>Starting solo minining...</source>
-        <translation>Iniciando solo mining...</translation>
+        <translation type="vanished">Iniciando solo mining...</translation>
     </message>
     <message>
         <source>Mining in pool. Hashrate: %1 H/s</source>
-        <translation>Mining e n pool. Tasa de hash: %1 H/s</translation>
+        <translation type="vanished">Mining e n pool. Tasa de hash: %1 H/s</translation>
     </message>
 </context>
 <context>
@@ -1881,7 +1885,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>Mined</source>
-        <translation>Minado</translation>
+        <translation type="vanished">Minado</translation>
     </message>
     <message>
         <source>Sent to myself</source>
