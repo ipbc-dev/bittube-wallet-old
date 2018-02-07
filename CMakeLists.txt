@@ -247,6 +247,11 @@ elseif (UNIX)
     list(REMOVE_ITEM HEADERS ${CMAKE_SOURCE_DIR}/src/gui/macdockiconhandler.h)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -maes -std=c++11")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -maes -std=c11")
+
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,$ORIGIN/libs")
+    set(CMAKE_INSTALL_RPATH "$ORIGIN/libs")
+    set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+
   endif (APPLE)
 endif ()
 
