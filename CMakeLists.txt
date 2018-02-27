@@ -4,7 +4,7 @@ include(CryptoNoteWallet.cmake)
 include(QREncode.cmake)
 
 if (APPLE)
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
+  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
 endif(APPLE)
 
 project(${CN_PROJECT_NAME})
@@ -21,7 +21,6 @@ include_directories(${CMAKE_BINARY_DIR}
     cryptonote/include
     cryptonote/src
     libqrencode)
-
 
 if(WIN32)
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -274,6 +273,7 @@ if (APPLE)
 elseif (UNIX)
   target_link_libraries(${PROJECT_NAME} -lpthread)
 elseif (WIN32)
+  # set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator' uiAccess=false\" /SUBSYSTEM:WINDOWS")
   target_link_libraries(${PROJECT_NAME} Imm32 Iphlpapi Winmm)
 endif (APPLE)
 

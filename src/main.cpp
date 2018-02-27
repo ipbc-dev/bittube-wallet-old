@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QSplashScreen>
 #include <QStyleFactory>
+#include <QSettings>
 
 #include "CommandLineParser.h"
 #include "CurrencyAdapter.h"
@@ -100,6 +101,14 @@ int main(int argc, char* argv[]) {
     QMessageBox::information(nullptr, QObject::tr("Help"), cmdLineParser.getHelpText());
     return app.exec();
   }
+  
+  /*
+  //create registry entries for URL execution ~s
+  QSettings ipbcKey("HKEY_CLASSES_ROOT\\ipbc", QSettings::NativeFormat);
+  ipbcKey.setValue(".", "IPBC-Wallet");
+  ipbcKey.setValue("URL Protocol", "");
+  QSettings ipbcOpenKey("HKEY_CLASSES_ROOT\\ipbc\\shell\\open\\command", QSettings::NativeFormat);
+  ipbcOpenKey.setValue(".", "\"" + QCoreApplication::applicationFilePath().replace("/", "\\") + "\" \"%1\""); */
 #endif
 
   LoggerAdapter::instance().init();
@@ -133,8 +142,19 @@ int main(int argc, char* argv[]) {
     return 0;
   }
   splash->finish(&MainWindow::instance());
+
+#ifdef _WIN32
   Updater d;
-    d.checkForUpdate();
+  if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
+	  d.checkForUpdate();
+  }
+#else
+  Updater d;
+  d.checkForUpdate();
+#endif
+
+  //Updater d;
+  //d.checkForUpdate();
   MainWindow::instance().show();
   WalletAdapter::instance().open("");
 

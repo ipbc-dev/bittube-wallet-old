@@ -10,7 +10,7 @@
 #include <QNetworkReply>
 #include <QUrl>
 
-const static QString IPBCCOIN_UPDATE_URL = "http://ipbc.io/download/update.txt";
+const static QString IPBCCOIN_UPDATE_URL = "http://ftp.ipbc.io/IPBC-Wallet/version.txt";
 
 class Updater : public QObject
 {
