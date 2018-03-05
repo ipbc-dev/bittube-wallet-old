@@ -3,18 +3,13 @@ Compilation instructions
 
 ### Windows
 
-**1. Clone wallet sources & Main repository**
+**1. Clone this repository, with submodules.**
 
 ```
-git clone https://github.com/ipbc-dev/ipbc-wallet.git
-git clone https://github.com/ipbc-dev/ipbc.git
+git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
 ```
 
-**2. Install Boost. For example using vcpkg:**
-
-```
-vcpkg install boost
-```
+**2. Install Boost where CMake can find it. For example you could download the [Precompiled Windows Binaries Package Here](https://sourceforge.net/projects/boost/files/boost-binaries/1.66.0/boost_1_66_0-bin-msvc-all-32-64.7z/download) and extract it to "C:\Program Files\boost"**
 
 **3. Install Qt 5: [download link](http://qt.io/download)**
 
@@ -30,26 +25,19 @@ mkdir build && cd build && cmake ..
 
 ### Linux
 
-**1. Clone wallet sources & Main repository**
+**1. Clone this repository, with submodules.**
 
 ```
-git clone https://github.com/ipbc-dev/ipbc-wallet.git
-git clone https://github.com/ipbc-dev/ipbc.git
+git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
 ```
 
-**2. Create symbolic link to coin sources in the main directory. For example:**
-
-```
-ln -s ../ipbc cryptonote
-```
-
-**3. Install dependencies. For example using Apt:**
+**2. Install dependencies. For example using Apt:**
 
 ```
 apt-get install -y cmake libboost-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev
 ```
 
-**4. Build**
+**3. Build**
 
 ```
 mkdir build && cd build && cmake .. && make
@@ -63,34 +51,27 @@ mkdir build && cd build && cmake .. && make
 xcode-select —install
 ```
 
-**2. Clone wallet sources & Main repository**
+**2. Clone this repository, with submodules.**
 
 ```
-git clone https://github.com/ipbc-dev/ipbc-wallet.git
-git clone https://github.com/ipbc-dev/ipbc.git
+git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
 ```
 
-**3. Create symbolic link to coin sources in the main directory. For example:**
-
-```
-ln -s ../ipbc cryptonote
-```
-
-**4. Install Boost. For example using homebrew.**
+**3. Install Boost. For example using homebrew.**
 
 ```
 brew install boost
 ```
 
-**5. Install cmake. For example using homebrew.**
+**4. Install cmake. For example using homebrew.**
 
 ```
 brew install cmake
 ```
 
-**4. Install Qt 5.9: [download link](http://qt.io/download)**
+**5. Install Qt 5.9: [download link](http://qt.io/download)**
 
-**5. Build**
+**6. Build**
 
 ```
 mkdir build && cd build && cmake .. && make
