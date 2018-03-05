@@ -11,6 +11,7 @@
 #include <QSplashScreen>
 #include <QStyleFactory>
 #include <QSettings>
+#include <QProcess>
 
 #include "CommandLineParser.h"
 #include "CurrencyAdapter.h"
@@ -30,145 +31,161 @@ using namespace WalletGui;
 
 int main(int argc, char* argv[]) {
 
-  QApplication app(argc, argv);
-  app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
-  app.setApplicationVersion(Settings::instance().getVersion());
-  app.setQuitOnLastWindowClosed(false);
+	QApplication app(argc, argv);
+	app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
+	app.setApplicationVersion(Settings::instance().getVersion());
+	app.setQuitOnLastWindowClosed(false);
 
 #ifndef Q_OS_MAC
-  QApplication::setStyle(QStyleFactory::create("Fusion"));
+	QApplication::setStyle(QStyleFactory::create("Fusion"));
 #endif
 
-  CommandLineParser cmdLineParser(nullptr);
-  Settings::instance().setCommandLineParser(&cmdLineParser);
-  bool cmdLineParseResult = cmdLineParser.process(app.arguments());
-  Settings::instance().load();
-  QTranslator translator;
-  QTranslator translatorQt;
+	CommandLineParser cmdLineParser(nullptr);
+	Settings::instance().setCommandLineParser(&cmdLineParser);
+	bool cmdLineParseResult = cmdLineParser.process(app.arguments());
+	Settings::instance().load();
+	QTranslator translator;
+	QTranslator translatorQt;
 
-  QString lng = Settings::instance().getLanguage();
+	QString lng = Settings::instance().getLanguage();
 
-  if(!lng.isEmpty()) {
-      translator.load(":/languages/" + lng + ".qm");
-      translatorQt.load(":/languages/qt_" + lng + ".qm");
+	if (!lng.isEmpty()) {
+		translator.load(":/languages/" + lng + ".qm");
+		translatorQt.load(":/languages/qt_" + lng + ".qm");
 
-      if(lng == "uk") {
-            QLocale::setDefault(QLocale("uk_UA"));
-        } else if(lng == "ru") {
-            QLocale::setDefault(QLocale("ru_RU"));
-        } else if(lng == "pl") {
-            QLocale::setDefault(QLocale("pl_PL"));
-        } else if(lng == "be") {
-            QLocale::setDefault(QLocale("be_BY"));
-        } else if(lng == "de") {
-            QLocale::setDefault(QLocale("de_DE"));
-        } else if(lng == "es") {
-            QLocale::setDefault(QLocale("es_ES"));
-        } else {
-            QLocale::setDefault(QLocale::c());
-        }
+		if (lng == "uk") {
+			QLocale::setDefault(QLocale("uk_UA"));
+		}
+		else if (lng == "ru") {
+			QLocale::setDefault(QLocale("ru_RU"));
+		}
+		else if (lng == "pl") {
+			QLocale::setDefault(QLocale("pl_PL"));
+		}
+		else if (lng == "be") {
+			QLocale::setDefault(QLocale("be_BY"));
+		}
+		else if (lng == "de") {
+			QLocale::setDefault(QLocale("de_DE"));
+		}
+		else if (lng == "es") {
+			QLocale::setDefault(QLocale("es_ES"));
+		}
+		else {
+			QLocale::setDefault(QLocale::c());
+		}
 
-    } else {
-      translator.load(":/languages/" + QLocale::system().name());
-      translatorQt.load(":/languages/qt_" +  QLocale::system().name());
-      QLocale::setDefault(QLocale::system().name());
-  }
-  app.installTranslator(&translator);
-  app.installTranslator(&translatorQt);
+	}
+	else {
+		translator.load(":/languages/" + QLocale::system().name());
+		translatorQt.load(":/languages/qt_" + QLocale::system().name());
+		QLocale::setDefault(QLocale::system().name());
+	}
+	app.installTranslator(&translator);
+	app.installTranslator(&translatorQt);
 
-  //QLocale::setDefault(QLocale::c());
+	//QLocale::setDefault(QLocale::c());
 
-  //QLocale locale = QLocale("uk_UA");
-  //QLocale::setDefault(locale);
+	//QLocale locale = QLocale("uk_UA");
+	//QLocale::setDefault(locale);
 
-  setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "");
 
-  QFile File(":/skin/default.qss");
-  File.open(QFile::ReadOnly);
-  QString StyleSheet = QLatin1String(File.readAll());
-  qApp->setStyleSheet(StyleSheet);
+	QFile File(":/skin/default.qss");
+	File.open(QFile::ReadOnly);
+	QString StyleSheet = QLatin1String(File.readAll());
+	qApp->setStyleSheet(StyleSheet);
 
-  if (PaymentServer::ipcSendCommandLine())
-  exit(0);
+	if (PaymentServer::ipcSendCommandLine())
+		exit(0);
 
-  PaymentServer* paymentServer = new PaymentServer(&app);
+	PaymentServer* paymentServer = new PaymentServer(&app);
 
 #ifdef Q_OS_WIN
-  if(!cmdLineParseResult) {
-    QMessageBox::critical(nullptr, QObject::tr("Error"), cmdLineParser.getErrorText());
-    return app.exec();
-  } else if (cmdLineParser.hasHelpOption()) {
-    QMessageBox::information(nullptr, QObject::tr("Help"), cmdLineParser.getHelpText());
-    return app.exec();
-  }
-  
-  /*
-  //create registry entries for URL execution ~s
-  QSettings ipbcKey("HKEY_CLASSES_ROOT\\ipbc", QSettings::NativeFormat);
-  ipbcKey.setValue(".", "IPBC-Wallet");
-  ipbcKey.setValue("URL Protocol", "");
-  QSettings ipbcOpenKey("HKEY_CLASSES_ROOT\\ipbc\\shell\\open\\command", QSettings::NativeFormat);
-  ipbcOpenKey.setValue(".", "\"" + QCoreApplication::applicationFilePath().replace("/", "\\") + "\" \"%1\""); */
+	if (!cmdLineParseResult) {
+		QMessageBox::critical(nullptr, QObject::tr("Error"), cmdLineParser.getErrorText());
+		return app.exec();
+	}
+	else if (cmdLineParser.hasHelpOption()) {
+		QMessageBox::information(nullptr, QObject::tr("Help"), cmdLineParser.getHelpText());
+		return app.exec();
+	}
 #endif
 
-  LoggerAdapter::instance().init();
+	// setup URI association
+#if defined(Q_OS_LINUX)
+	QStringList args;
+	QProcess exec;
 
-  QString dataDirPath = Settings::instance().getDataDir().absolutePath();
+	//as root
+	args << "-c" << "printf '[Desktop Entry]\\nName = IPBC URL Handler\\nGenericName = IPBC\\nComment = Handle URL Sheme ipbc://\\nExec = " + QCoreApplication::applicationFilePath() + " %%u\\nTerminal = false\\nType = Application\\nMimeType = x-scheme-handler/ipbc;\\nIcon = IPBC-Wallet' | tee /usr/share/applications/ipbc-handler.desktop";
+	exec.start("/bin/sh", args);
+	exec.waitForFinished();
 
-  if (!QDir().exists(dataDirPath)) {
-    QDir().mkpath(dataDirPath);
-  }
+	args.clear();
+	args << "-c" << "update-desktop-database";
+	exec.start("/bin/sh", args);
+	exec.waitForFinished();
+#endif
 
-  QLockFile lockFile(Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock"));
-  if (!lockFile.tryLock()) {
-    QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("%1 wallet already running").arg(CurrencyAdapter::instance().getCurrencyDisplayName()));
-    return 0;
-  }
+	LoggerAdapter::instance().init();
 
-  SignalHandler::instance().init();
-  QObject::connect(&SignalHandler::instance(), &SignalHandler::quitSignal, &app, &QApplication::quit);
+	QString dataDirPath = Settings::instance().getDataDir().absolutePath();
 
-  QSplashScreen* splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/ Qt::X11BypassWindowManagerHint);
-  if (!splash->isVisible()) {
-    splash->show();
-  }
+	if (!QDir().exists(dataDirPath)) {
+		QDir().mkpath(dataDirPath);
+	}
 
-  splash->showMessage(QObject::tr("Loading blockchain..."), Qt::AlignLeft | Qt::AlignBottom, Qt::white);
+	QLockFile lockFile(Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock"));
+	if (!lockFile.tryLock()) {
+		QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("%1 wallet already running").arg(CurrencyAdapter::instance().getCurrencyDisplayName()));
+		return 0;
+	}
 
-  app.processEvents();
-  qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
-  qRegisterMetaType<quintptr>("quintptr");
-  if (!NodeAdapter::instance().init()) {
-    return 0;
-  }
-  splash->finish(&MainWindow::instance());
+	SignalHandler::instance().init();
+	QObject::connect(&SignalHandler::instance(), &SignalHandler::quitSignal, &app, &QApplication::quit);
+
+	QSplashScreen* splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/ Qt::X11BypassWindowManagerHint);
+	if (!splash->isVisible()) {
+		splash->show();
+	}
+
+	splash->showMessage(QObject::tr("Loading blockchain..."), Qt::AlignLeft | Qt::AlignBottom, Qt::black);
+
+	app.processEvents();
+	qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
+	qRegisterMetaType<quintptr>("quintptr");
+	if (!NodeAdapter::instance().init()) {
+		return 0;
+	}
+	splash->finish(&MainWindow::instance());
 
 #ifdef _WIN32
-  Updater d;
-  if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
-	  d.checkForUpdate();
-  }
+	Updater d;
+	if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
+		d.checkForUpdate();
+	}
 #else
-  Updater d;
-  d.checkForUpdate();
+	Updater d;
+	d.checkForUpdate();
 #endif
 
-  //Updater d;
-  //d.checkForUpdate();
-  MainWindow::instance().show();
-  WalletAdapter::instance().open("");
+	//Updater d;
+	//d.checkForUpdate();
+	MainWindow::instance().show();
+	WalletAdapter::instance().open("");
 
-  QTimer::singleShot(1000, paymentServer, SLOT(uiReady()));
-  QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(), &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
+	QTimer::singleShot(1000, paymentServer, SLOT(uiReady()));
+	QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(), &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
 
-  QObject::connect(QApplication::instance(), &QApplication::aboutToQuit, []() {
-    MainWindow::instance().quit();
-    if (WalletAdapter::instance().isOpen()) {
-      WalletAdapter::instance().close();
-    }
+	QObject::connect(QApplication::instance(), &QApplication::aboutToQuit, []() {
+		MainWindow::instance().quit();
+		if (WalletAdapter::instance().isOpen()) {
+			WalletAdapter::instance().close();
+		}
 
-    NodeAdapter::instance().deinit();
-  });
+		NodeAdapter::instance().deinit();
+	});
 
-  return app.exec();
+	return app.exec();
 }

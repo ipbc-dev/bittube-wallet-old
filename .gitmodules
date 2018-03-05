@@ -1,0 +1,6 @@
+[submodule "libqrencode"]
+	path = libqrencode
+	url = https://github.com/fukuchi/libqrencode.git
+[submodule "cryptonote"]
+	path = cryptonote
+	url = https://github.com/ipbc-dev/ipbc.git
