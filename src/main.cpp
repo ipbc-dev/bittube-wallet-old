@@ -38,7 +38,13 @@ int main(int argc, char* argv[]) {
 	bool cmdLineParseResult = cmdLineParser.process(app.arguments());
 	Settings::instance().load();
 
-	app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
+	QString app_name = CurrencyAdapter::instance().getCurrencyName() + "wallet";
+
+	if (Settings::instance().isTestnet()) {
+		app_name += "_testnet";
+	}
+
+	app.setApplicationName(app_name);
 	app.setApplicationVersion(Settings::instance().getVersion());
 	app.setQuitOnLastWindowClosed(false);
 
@@ -159,6 +165,25 @@ int main(int argc, char* argv[]) {
 		splash->showMessage(QObject::tr("Loading blockchain..."), Qt::AlignLeft | Qt::AlignBottom, Qt::black);
 	}
 
+	if (Settings::instance().isTestnet()) {
+		MainWindow::instance().setWindowTitle(MainWindow::instance().windowTitle() + " [TESTNET]");
+
+		QLabel* ts_label = new QLabel((QWidget*)&MainWindow::instance(), 0);
+		ts_label->setOpenExternalLinks(true);
+		ts_label->setTextFormat(Qt::TextFormat::AutoText);
+		ts_label->setAlignment(Qt::AlignCenter);
+		QFont f("Arial", 15);
+		ts_label->setFont(f);
+
+		ts_label->move(QPoint(180, 1));
+		ts_label->setFixedSize(QSize(100, 30));
+
+		ts_label->setText("<a style='text-decoration:none; color: red;' href='http://testnet.ipbc.io'>TESTNET</a>");
+		ts_label->setStyleSheet("QLabel { background-color : black; color : red; border: 1px solid; border-radius: 5px; }");
+
+		ts_label->show();
+	}
+
 	app.processEvents();
 	qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
 	qRegisterMetaType<quintptr>("quintptr");
@@ -182,24 +207,7 @@ int main(int argc, char* argv[]) {
 	MainWindow::instance().show();
 	WalletAdapter::instance().open("");
 
-	if (Settings::instance().isTestnet()) {
-		MainWindow::instance().setWindowTitle(MainWindow::instance().windowTitle() + " [TESTNET]");
-
-		QLabel* ts_label = new QLabel((QWidget*)&MainWindow::instance(), 0);
-		ts_label->setOpenExternalLinks(true);
-		ts_label->setTextFormat(Qt::TextFormat::AutoText);
-		ts_label->setAlignment(Qt::AlignCenter);
-		QFont f("Arial", 15);
-		ts_label->setFont(f);
-
-		ts_label->move(QPoint(180, 1));
-		ts_label->setFixedSize(QSize(100, 30));
-
-		ts_label->setText("<a style='text-decoration:none; color: red;' href='http://testnet.ipbc.io'>TESTNET</a>");
-		ts_label->setStyleSheet("QLabel { background-color : black; color : red; border: 1px solid; border-radius: 5px; }");
-
-		ts_label->show();
-	}
+	
 
 	QTimer::singleShot(1000, paymentServer, SLOT(uiReady()));
 	QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(), &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
