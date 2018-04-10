@@ -39,9 +39,10 @@ int main(int argc, char* argv[]) {
 	Settings::instance().load();
 
 	QString app_name = CurrencyAdapter::instance().getCurrencyName() + "wallet";
+	QString testnet_ver_str(std::to_string(CryptoNote::TESTNET_VERSION).c_str());
 
 	if (Settings::instance().isTestnet()) {
-		app_name += "_testnet";
+		app_name += "_testnet_" + testnet_ver_str;
 	}
 
 	app.setApplicationName(app_name);
@@ -166,7 +167,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	if (Settings::instance().isTestnet()) {
-		MainWindow::instance().setWindowTitle(MainWindow::instance().windowTitle() + " [TESTNET]");
+		MainWindow::instance().setWindowTitle(MainWindow::instance().windowTitle() + " [TESTNET " + testnet_ver_str + "]");
 
 		QLabel* ts_label = new QLabel((QWidget*)&MainWindow::instance(), 0);
 		ts_label->setOpenExternalLinks(true);
@@ -183,7 +184,7 @@ int main(int argc, char* argv[]) {
 
 		ts_label->show();
 	}
-
+	
 	app.processEvents();
 	qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
 	qRegisterMetaType<quintptr>("quintptr");
@@ -192,22 +193,21 @@ int main(int argc, char* argv[]) {
 	}
 	splash->finish(&MainWindow::instance());
 
-#ifdef _WIN32
-	Updater d;
-	if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
-		d.checkForUpdate();
-	}
-#else
-	Updater d;
-	d.checkForUpdate();
-#endif
+	if (!Settings::instance().isTestnet()) {
 
-	//Updater d;
-	//d.checkForUpdate();
+#ifdef _WIN32
+		Updater d;
+		if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
+			d.checkForUpdate();
+		}
+#else
+		Updater d;
+		d.checkForUpdate();
+#endif
+	}
+
 	MainWindow::instance().show();
 	WalletAdapter::instance().open("");
-
-	
 
 	QTimer::singleShot(1000, paymentServer, SLOT(uiReady()));
 	QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(), &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
