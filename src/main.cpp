@@ -36,16 +36,16 @@ int main(int argc, char* argv[]) {
 	CommandLineParser cmdLineParser(nullptr);
 	Settings::instance().setCommandLineParser(&cmdLineParser);
 	bool cmdLineParseResult = cmdLineParser.process(app.arguments());
-	Settings::instance().load();
 
 	QString app_name = CurrencyAdapter::instance().getCurrencyName() + "wallet";
 	QString testnet_ver_str(std::to_string(CryptoNote::TESTNET_VERSION).c_str());
-
 	if (Settings::instance().isTestnet()) {
 		app_name += "_testnet_" + testnet_ver_str;
 	}
 
 	app.setApplicationName(app_name);
+	Settings::instance().load();
+
 	app.setApplicationVersion(Settings::instance().getVersion());
 	app.setQuitOnLastWindowClosed(false);
 
