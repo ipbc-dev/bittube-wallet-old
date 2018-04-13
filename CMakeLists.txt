@@ -4,7 +4,7 @@ include(CryptoNoteWallet.cmake)
 include(QREncode.cmake)
 
 if (APPLE)
-  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.12" CACHE STRING "Minimum OS X deployment version")
+  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
 endif(APPLE)
 
 project(${CN_PROJECT_NAME})
