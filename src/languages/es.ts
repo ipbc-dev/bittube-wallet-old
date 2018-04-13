@@ -17,7 +17,8 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPBC v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017. Karbovanets Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2018. IPBC Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://ipbc.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://ipbc.io/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPBC v. %1&lt;/p&gt;&lt;p&gt;Esta es la criptomoneda anónima de próxima generación basada en CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017. Karbovanets Developers&lt;/p&gt;&lt;p&gt; Copyright (c) 2016-2018. IPBC Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://ipbc.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://ipbc.io/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,7 +73,7 @@
     </message>
     <message>
         <source>YOUR ACCOUNT</source>
-        <translation type="unfinished"></translation>
+        <translation>SU CUENTA</translation>
     </message>
 </context>
 <context>
@@ -141,15 +142,15 @@
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Inglés</translation>
     </message>
     <message>
         <source>Deutsch</source>
-        <translation type="unfinished"></translation>
+        <translation>Alemán</translation>
     </message>
     <message>
         <source>Español</source>
-        <translation type="unfinished"></translation>
+        <translation>Español</translation>
     </message>
 </context>
 <context>
@@ -205,7 +206,7 @@
     </message>
     <message>
         <source>Confirm sending %1 IPBC</source>
-        <translation type="unfinished">Confirma el envío de %1 IPBC</translation>
+        <translation>Confirma el envío de %1 IPBC</translation>
     </message>
 </context>
 <context>
@@ -666,7 +667,6 @@ Por favor, espera...</translation>
     <name>MnemonicSeedDialog</name>
     <message>
         <source>Mnemonic seed</source>
-        <translatorcomment>В данном контексте, лучше использовать синоним данного термина, поскольку в испанском языке seed восприниматеся только как семя.</translatorcomment>
         <translation>Frase mnemónica</translation>
     </message>
     <message>
@@ -713,7 +713,6 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Host:</source>
-        <translatorcomment>В испанском языке данное слово есть второстепенным и теряется за счет главного контекстного слова, к которому привязано. Поэтому оставляем этот технологический термин как есть.</translatorcomment>
         <translation>Host:</translation>
     </message>
     <message>
@@ -898,7 +897,6 @@ Por favor, espera...</translation>
     </message>
     <message>
         <source>Loading blockchain...</source>
-        <translatorcomment>Blockchain не переводится, поскольку имеет интернациональное значение</translatorcomment>
         <translation>Cargando blockchain...</translation>
     </message>
     <message>
@@ -917,7 +915,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>[TESTNET] Loading blockchain...</source>
-        <translation type="unfinished"></translation>
+        <translation>[TESTNET] Cargando blockchain...</translation>
     </message>
 </context>
 <context>
@@ -1014,7 +1012,6 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Anonymity level:</source>
-        <translatorcomment>Ошибка в слове Anonimity  - правильно Anonymity</translatorcomment>
         <translation>Nivel de anonimato:</translation>
     </message>
     <message>
@@ -1401,7 +1398,6 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;without Payment ID&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translatorcomment>Нужен знак &quot;¿&quot; перед вопросом</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que desea enviar &lt;strong&gt;sin ID de pago&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
@@ -1481,7 +1477,6 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Backup wallet to...</source>
-        <translatorcomment>Backup - как глагол или существительное?</translatorcomment>
         <translation>Copia de respaldo de monedero a...</translation>
     </message>
     <message>
@@ -1852,7 +1847,6 @@ Are you sure?</source>
     </message>
     <message>
         <source>Range...</source>
-        <translatorcomment>Глагол или существительное?</translatorcomment>
         <translation>Varia...</translation>
     </message>
     <message>
@@ -1920,7 +1914,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>Incoming transaction, unconfirmed</source>
-        <translation>Transacción entrante, inconfirmado</translation>
+        <translation>Transacción entrante, sin confirmar</translation>
     </message>
     <message>
         <source>Mined, confirmations</source>
@@ -1928,11 +1922,11 @@ Are you sure?</source>
     </message>
     <message>
         <source>Sent to yourself, unconfirmed</source>
-        <translation>Enviado a ti mismo, inconfirmado</translation>
+        <translation>Enviado a ti mismo, sin confirmar</translation>
     </message>
     <message>
         <source>Outgoing transaction, unconfirmed</source>
-        <translation>Transacción saliente, inconfirmado</translation>
+        <translation>Transacción saliente, sin confirmar</translation>
     </message>
     <message numerus="yes">
         <source>Incoming transaction, %n confirmation(s)</source>
