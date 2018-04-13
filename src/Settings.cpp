@@ -56,7 +56,7 @@ void Settings::load() {
     }
 
     if (!m_settings.contains(OPTION_LANGUAGE)) {
-         m_currentLang = "uk";
+         m_currentLang = "en";
     }
 
     if (!m_settings.contains(OPTION_CONNECTION)) {
