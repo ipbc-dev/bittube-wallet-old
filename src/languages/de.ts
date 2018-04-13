@@ -283,11 +283,11 @@ Bitte warten...</translation>
     <name>ExportTrackingKeyDialog</name>
     <message>
         <source>Export tracking key</source>
-        <translation>Tracking key exportieren</translation>
+        <translation>Tracking Schlüssel exportieren</translation>
     </message>
     <message>
         <source>Tracking key allows to see all incoming transactions of this wallet. It does not allow to spend funds.</source>
-        <translation>Mit dem Tracking keyl können Sie alle eingehenden Transaktionen dieser Brieftasche sehen. Es wird nicht erlaubt Beträge auszugeben.</translation>
+        <translation>Mit dem Tracking Schlüssel können Sie alle eingehenden Transaktionen dieser Brieftasche sehen. Es wird nicht erlaubt Beträge auszugeben.</translation>
     </message>
     <message>
         <source>Save to file</source>
@@ -1406,11 +1406,11 @@ Externer Port für das P2P-Netzwerkprotokoll (wenn Portweiterleitung mit NAT ver
     <name>WalletGui::ExportTrackingKeyDialog</name>
     <message>
         <source>Save tracking key to...</source>
-        <translation>Tracking Key speichern unter...</translation>
+        <translation>Tracking Schlüssel speichern unter...</translation>
     </message>
     <message>
         <source>Tracking key (*.trackingkey)</source>
-        <translation>Tracking key (*.trackingkey)</translation>
+        <translation>Tracking Schlüssel (*.trackingkey)</translation>
     </message>
 </context>
 <context>
