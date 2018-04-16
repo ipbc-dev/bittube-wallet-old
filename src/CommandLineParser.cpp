@@ -10,8 +10,9 @@
 
 namespace WalletGui {
 
-CommandLineParser::CommandLineParser(QObject* _parent) : QObject(_parent), m_parser(), m_helpOption(m_parser.addHelpOption()),
-  m_versionOption(m_parser.addVersionOption()),
+CommandLineParser::CommandLineParser(QObject* _parent) : QObject(_parent), m_parser(), 
+  m_helpOption(),
+  m_versionOption(),
   m_testnetOption("testnet", tr("Used to deploy test nets. Checkpoints and hardcoded seeds are ignored, network id is changed. "
     "Use it with –data-dir flag. The wallet must be launched with –testnet flag")),
   m_p2pBindIpOption("p2p-bind-ip", tr("Interface for p2p network protocol"), tr("ip"), "0.0.0.0"),
