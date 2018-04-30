@@ -34,9 +34,6 @@
 /build-linux-x86
 /build-win-x64
 /build-win-x86
-<<<<<<< HEAD
 /build
 cryptonote
-=======
 /win_build
->>>>>>> ace54f7b47968be64555d6c8b1be6bd233540993

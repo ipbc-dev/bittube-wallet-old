@@ -9,6 +9,8 @@ endif(APPLE)
 
 project(${CN_PROJECT_NAME})
 
+
+
 execute_process(COMMAND git log -1 --pretty=format:%h
 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 OUTPUT_VARIABLE GIT_REVISION)
@@ -278,6 +280,8 @@ elseif (WIN32)
 endif (APPLE)
 
 qt5_use_modules(${PROJECT_NAME} Widgets Gui Network)
+
+include("${CMAKE_SOURCE_DIR}/libs/libwebsockets.cmake")
 
 # Installation
 
