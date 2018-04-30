@@ -62,20 +62,23 @@ std::istream& operator>>(std::istream& str, Version::VersionDigit& digit)
 void Updater::checkForUpdate()
 {
     manager = new QNetworkAccessManager(this);
-    if(manager->networkAccessible() == QNetworkAccessManager::Accessible)
-    {
+    //if(manager->networkAccessible() == QNetworkAccessManager::Accessible)
+    //{
         connect(manager, SIGNAL(finished(QNetworkReply*)),
                 this, SLOT(replyFinished(QNetworkReply*)));
         manager->get(QNetworkRequest(QUrl(IPBCCOIN_UPDATE_URL)));
-    }
+    //}
+	//else {
+		//QMessageBox::information(nullptr, tr("LOL"), "No network", QMessageBox::Ok);
+	//}
 }
 
 void Updater::replyFinished (QNetworkReply *reply)
 {
     if(reply->error())
     {
-        QString error = QString(tr("Error: %1")).arg(reply->errorString());
-        QMessageBox::information(nullptr, tr("Unable to check for update"), error, QMessageBox::Ok);
+        //QString error = QString(tr("Error: %1")).arg(reply->errorString());
+        //QMessageBox::information(nullptr, tr("Unable to check for update"), error, QMessageBox::Ok);
     }
     else
     {
@@ -88,7 +91,7 @@ void Updater::replyFinished (QNetworkReply *reply)
          if (ourVersion < remoteVersion) {
 
              if (QMessageBox::warning(nullptr, QObject::tr("New version available"), QObject::tr("There is update available.\nDo you want to go to download page?"), QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) {
-                 QString link = "http://ipbc.io/#downloads";
+                 QString link = "https://ipbc.io/wallet";
                  QDesktopServices::openUrl(QUrl(link));
              }
 

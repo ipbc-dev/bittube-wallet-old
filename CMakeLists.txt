@@ -4,7 +4,7 @@ include(CryptoNoteWallet.cmake)
 include(QREncode.cmake)
 
 if (APPLE)
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
+  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
 endif(APPLE)
 
 project(${CN_PROJECT_NAME})
@@ -22,26 +22,25 @@ include_directories(${CMAKE_BINARY_DIR}
     cryptonote/src
     libqrencode)
 
-
 if(WIN32)
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
       set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015_64")
-      set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x64-windows")
-      set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x64-windows\\lib")
+      # set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x64-windows")
+      # set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x64-windows\\lib")
   elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
       set (CMAKE_PREFIX_PATH "C:\\Qt\\5.9.1\\msvc2015")
-      set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x86-windows")
-      set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x86-windows\\lib")
+      # set (BOOST_ROOT "C:\\vcpkg\\packages\\boost_x86-windows")
+      # set (BOOST_LIBRARYDIR "C:\\vcpkg\\packages\\boost_x86-windows\\lib")
   endif()
 elseif(APPLE)
-  set (CMAKE_PREFIX_PATH "/Users/David/qt/5.10.0/clang_64")
+  # set (CMAKE_PREFIX_PATH "/Users/David/qt/5.10.0/clang_64")
 endif(WIN32)
 
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Network REQUIRED)
 
-set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_STATIC_LIBS ON)
 
 find_package(Boost 1.55 REQUIRED COMPONENTS date_time filesystem program_options regex serialization system thread chrono)
 if ((${Boost_MAJOR_VERSION} EQUAL 1) AND (${Boost_MINOR_VERSION} EQUAL 54))
@@ -247,6 +246,11 @@ elseif (UNIX)
     list(REMOVE_ITEM HEADERS ${CMAKE_SOURCE_DIR}/src/gui/macdockiconhandler.h)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -maes -std=c++11")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -maes -std=c11")
+
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,$ORIGIN/libs")
+    set(CMAKE_INSTALL_RPATH "$ORIGIN/libs")
+    set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+
   endif (APPLE)
 endif ()
 
@@ -269,6 +273,7 @@ if (APPLE)
 elseif (UNIX)
   target_link_libraries(${PROJECT_NAME} -lpthread)
 elseif (WIN32)
+  # set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator' uiAccess=false\" /SUBSYSTEM:WINDOWS")
   target_link_libraries(${PROJECT_NAME} Imm32 Iphlpapi Winmm)
 endif (APPLE)
 

@@ -149,6 +149,7 @@ void SendFrame::onAddressFound(const QString& _address) {
 
 void SendFrame::openUriClicked() {
     OpenUriDialog dlg(&MainWindow::instance());
+
     if (dlg.exec() == QDialog::Accepted) {
         QString uri = dlg.getURI();
         if (uri.isEmpty()) {
@@ -160,9 +161,12 @@ void SendFrame::openUriClicked() {
 }
 
 void SendFrame::parsePaymentRequest(QString _request) {
+	//unminimize window if minimized ~S
+	MainWindow::instance().showNormal();
+
     if(_request.startsWith("IPBC://", Qt::CaseInsensitive))
     {
-       _request.replace(0, 13, "IPBC:");
+       _request.replace(0, 7, "IPBC:");
     }
     if(!_request.startsWith("IPBC:", Qt::CaseInsensitive)) {
       QCoreApplication::postEvent(&MainWindow::instance(), new ShowMessageEvent(tr("Payment request should start with IPBC:"), QtCriticalMsg));
@@ -171,7 +175,7 @@ void SendFrame::parsePaymentRequest(QString _request) {
 
     if(_request.startsWith("IPBC:", Qt::CaseInsensitive))
     {
-      _request.remove(0, 11);
+      _request.remove(0, 5);
     }
 
     QString address = _request.split("?").at(0);
@@ -202,7 +206,6 @@ void SendFrame::parsePaymentRequest(QString _request) {
     if(!payment_id.isEmpty()){
         SendFrame::insertPaymentID(payment_id);
     }
-
 }
 
 void SendFrame::sendClicked() {

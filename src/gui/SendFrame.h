@@ -14,6 +14,10 @@ namespace Ui {
   class SendFrame;
 }
 
+namespace CryptoNote {
+	typedef size_t TransactionId;
+}
+
 namespace WalletGui {
 
 class TransferFrame;
