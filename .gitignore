@@ -34,3 +34,5 @@
 /build-linux-x86
 /build-win-x64
 /build-win-x86
+/build
+cryptonote
