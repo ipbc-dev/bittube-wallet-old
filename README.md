@@ -69,7 +69,14 @@ brew install boost
 brew install cmake
 ```
 
-**5. Install Qt 5.9: [download link](http://qt.io/download)**
+**5. Install Qt 5.9:**
+
+  * Ubuntu 16.04 and up
+  ```
+  apt install qtbase5-dev
+  ```
+
+  * Binaries from Qt upstream [download link](http://qt.io/download)
 
 **6. Build**
 
