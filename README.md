@@ -34,7 +34,7 @@ git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
 **2. Install dependencies. For example using Apt:**
 
 ```
-apt-get install -y cmake libboost-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev
+apt-get install -y cmake libboost-all-dev qtbase5-dev
 ```
 
 **3. Build**
@@ -69,14 +69,7 @@ brew install boost
 brew install cmake
 ```
 
-**5. Install Qt 5.9:**
-
-  * Ubuntu 16.04 and up
-  ```
-  apt install qtbase5-dev
-  ```
-
-  * Binaries from Qt upstream [download link](http://qt.io/download)
+**5. Install Qt 5.9: [download link](http://qt.io/download)**
 
 **6. Build**
 
