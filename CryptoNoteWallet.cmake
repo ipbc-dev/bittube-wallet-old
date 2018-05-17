@@ -2,4 +2,4 @@
 set(CN_PROJECT_NAME "bittube-wallet")
 set(CN_CURRENCY_DISPLAY_NAME "BitTube")
 set(CN_CURRENCY_TICKER "TUBE")
-set(CN_VERSION 1.1.1.0)
+set(CN_VERSION 1.1.3.0)
