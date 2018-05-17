@@ -142,7 +142,26 @@ int main(int argc, char* argv[]) {
 	QString dataDirPath = Settings::instance().getDataDir().absolutePath();
 
 	if (!QDir().exists(dataDirPath)) {
-		QDir().mkpath(dataDirPath);
+		QString oldDataDirPath = QString(dataDirPath).replace("bittube", "ipbc");
+		if (QDir().exists(oldDataDirPath)) {
+			auto dir = QDir(oldDataDirPath);
+			QLockFile oldLockFile(dir.absoluteFilePath("ipbcwallet.lock"));
+			if (!oldLockFile.tryLock()) {
+				QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("Old version of wallet is still running"));
+				return 1;
+			}
+			oldLockFile.unlock();
+			if (QDir().rename(oldDataDirPath, dataDirPath)) {
+				dir = QDir(dataDirPath);
+				std::vector<QString> files = {"ipbcwallet.cfg", "ipbcwallet.log", "ipbcwallet.wallet", "ipbcwallet.wallet.backup", "ipbcwallet.lock"};
+				for (auto f : files) QFile().rename(dir.absoluteFilePath(f), dir.absoluteFilePath(f).replace("ipbc", "bittube"));
+			} else {
+				QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("Could not rename old data directory!"));
+				return 1;
+			}
+		} else {
+			QDir().mkpath(dataDirPath);
+		}
 	}
 
 	QLockFile lockFile(Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock"));
