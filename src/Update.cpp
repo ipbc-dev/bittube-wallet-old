@@ -6,6 +6,8 @@
 #include <QDesktopServices>
 #include <QApplication>
 #include <QMessageBox>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include <iostream>
 #include <sstream>
@@ -83,19 +85,25 @@ void Updater::replyFinished (QNetworkReply *reply)
     else
     {
         Version ourVersion = Settings::instance().getVersion().split("-")[0].toStdString();
+		Version remoteVersion = "0.0.0";
 
-		QString result = reply->readAll().data();      
+		// QString result = reply->readAll().data();
+		// Version remoteVersion = result.toStdString();
+		QJsonDocument doc = QJsonDocument::fromJson(reply->readAll().data());
+		if (doc.isObject()) {
+			QJsonObject obj = doc.object();
+			if (obj.contains("tag_name")) remoteVersion = obj["tag_name"].toString().toStdString();
+		}
 
-        Version remoteVersion = result.toStdString();
+        if (ourVersion < remoteVersion) {
 
-         if (ourVersion < remoteVersion) {
+            if (QMessageBox::warning(nullptr, QObject::tr("New version available"), QObject::tr("There is update available.\nDo you want to go to download page?"), QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) {
+                QString link = "https://github.com/ipbc-dev/bittube-wallet/releases/latest";
+                QDesktopServices::openUrl(QUrl(link));
+            }
 
-             if (QMessageBox::warning(nullptr, QObject::tr("New version available"), QObject::tr("There is update available.\nDo you want to go to download page?"), QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) {
-                 QString link = "https://coin.bit.tube/wallet";
-                 QDesktopServices::openUrl(QUrl(link));
-             }
-
-         }
+        }
     }
     reply->deleteLater();
+	delete this;
 }

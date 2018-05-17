@@ -10,13 +10,16 @@
 #include <QNetworkReply>
 #include <QUrl>
 
-const static QString BITTUBE_UPDATE_URL = "http://ftp.ipbc.io/IPBC-Wallet/version.txt";
+const static QString BITTUBE_UPDATE_URL = "https://api.github.com/repos/ipbc-dev/bittube-wallet/releases/latest";
 
 class Updater : public QObject
 {
     Q_OBJECT
 public:
     explicit Updater(QObject *parent = 0);
+	~Updater() {
+		delete manager;
+	}
 
     void checkForUpdate();
 

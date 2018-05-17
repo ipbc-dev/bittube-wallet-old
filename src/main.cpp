@@ -196,13 +196,13 @@ int main(int argc, char* argv[]) {
 	if (!Settings::instance().isTestnet()) {
 
 #ifdef _WIN32
-		Updater d;
-		if (!QCoreApplication::applicationFilePath().toLower().contains("ipbc/ipbc-wallet")) {
-			d.checkForUpdate();
+		if (!QCoreApplication::applicationFilePath().toLower().contains("bittube/bittube-wallet")) {
+			Updater *d = new Updater();
+			d->checkForUpdate();
 		}
 #else
-		Updater d;
-		d.checkForUpdate();
+		Updater *d = new Updater();
+		d->checkForUpdate();
 #endif
 	}
 
