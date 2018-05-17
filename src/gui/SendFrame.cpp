@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2015 The Cryptonote developers
 // Copyright (c) 2015-2016 XDN developers
-// Copyright (c) 2016-2017 The IPBC developers
+// Copyright (c) 2016-2018 The BitTube developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -164,16 +164,16 @@ void SendFrame::parsePaymentRequest(QString _request) {
 	//unminimize window if minimized ~S
 	MainWindow::instance().showNormal();
 
-    if(_request.startsWith("IPBC://", Qt::CaseInsensitive))
+    if(_request.startsWith("TUBE://", Qt::CaseInsensitive))
     {
-       _request.replace(0, 7, "IPBC:");
+       _request.replace(0, 7, "TUBE:");
     }
-    if(!_request.startsWith("IPBC:", Qt::CaseInsensitive)) {
-      QCoreApplication::postEvent(&MainWindow::instance(), new ShowMessageEvent(tr("Payment request should start with IPBC:"), QtCriticalMsg));
+    if(!_request.startsWith("TUBE:", Qt::CaseInsensitive)) {
+      QCoreApplication::postEvent(&MainWindow::instance(), new ShowMessageEvent(tr("Payment request should start with TUBE:"), QtCriticalMsg));
       return;
     }
 
-    if(_request.startsWith("IPBC:", Qt::CaseInsensitive))
+    if(_request.startsWith("TUBE:", Qt::CaseInsensitive))
     {
       _request.remove(0, 5);
     }

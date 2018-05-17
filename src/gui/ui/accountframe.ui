@@ -456,7 +456,7 @@ border: 1px solid lightgray;
 border-left: 0;</string>
          </property>
          <property name="text">
-          <string> IPBC</string>
+          <string> TUBE</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

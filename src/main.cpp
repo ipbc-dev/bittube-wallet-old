@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2015 The Cryptonote developers
-// Copyright (c) 2016-2017 The IPBC developers
+// Copyright (c) 2016-2018 The BitTube developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <QApplication>
@@ -127,7 +127,7 @@ int main(int argc, char* argv[]) {
 	QProcess exec;
 
 	//as root
-	args << "-c" << "printf '[Desktop Entry]\\nName = IPBC URL Handler\\nGenericName = IPBC\\nComment = Handle URL Sheme ipbc://\\nExec = " + QCoreApplication::applicationFilePath() + " %%u\\nTerminal = false\\nType = Application\\nMimeType = x-scheme-handler/ipbc;\\nIcon = IPBC-Wallet' | tee /usr/share/applications/ipbc-handler.desktop";
+	args << "-c" << "printf '[Desktop Entry]\\nName = BitTube URL Handler\\nGenericName = BitTube\\nComment = Handle URL Sheme tube://\\nExec = " + QCoreApplication::applicationFilePath() + " %%u\\nTerminal = false\\nType = Application\\nMimeType = x-scheme-handler/tube;\\nIcon = BitTube-Wallet' | tee /usr/share/applications/tube-handler.desktop";
 	exec.start("/bin/sh", args);
 	exec.waitForFinished();
 

@@ -218,9 +218,9 @@ elseif (UNIX)
     file(GLOB_RECURSE OBJC_SOURCES src/*.mm)
     set(SOURCES ${SOURCES} ${OBJC_SOURCES})
     set(PLATFORM_DIR OSX)
-    set(MACOSX_BUNDLE_INFO_STRING "IPBC GUI wallet")
+    set(MACOSX_BUNDLE_INFO_STRING "BitTube GUI wallet")
     set(MACOSX_BUNDLE_LONG_VERSION_STRING "${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
-    set(MACOSX_BUNDLE_BUNDLE_NAME "IPBC")
+    set(MACOSX_BUNDLE_BUNDLE_NAME "BitTube")
     set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
     set(MACOSX_BUNDLE_BUNDLE_VERSION "$${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
 
@@ -232,8 +232,8 @@ elseif (UNIX)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 -maes -D_DARWIN_C_SOURCE")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Cocoa -framework OpenGL -framework CoreFoundation -framework Carbon -framework IOKit -L/usr/lib")
 
-    set(MACOSX_BUNDLE_ICON_FILE IPBC.icns)
-    set(APPLICATION_ICON src/images/IPBC.icns)
+    set(MACOSX_BUNDLE_ICON_FILE bittube.icns)
+    set(APPLICATION_ICON src/images/bittube.icns)
     set_source_files_properties(${APPLICATION_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
 
     set(BUILD_PLATFORM MACOSX_BUNDLE)
@@ -283,8 +283,8 @@ qt5_use_modules(${PROJECT_NAME} Widgets Gui Network)
 
 set(CPACK_PACKAGE_NAME ${CN_PROJECT_NAME})
 set(CPACK_PACKAGE_VERSION ${CN_VERSION})
-set(CPACK_PACKAGE_VENDOR "IPBC")
-set(CPACK_PACKAGE_CONTACT "http://ipbc.com")
+set(CPACK_PACKAGE_VENDOR "BitTube")
+set(CPACK_PACKAGE_CONTACT "https://coin.bit.tube")
 set(CPACK_STRIP_FILES ON)
 if (APPLE)
     set(CPACK_GENERATOR DragNDrop)
@@ -295,9 +295,9 @@ elseif (UNIX)
 
     install(PROGRAMS build/${PROJECT_NAME} DESTINATION bin
     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
-    install(FILES src/ipbc.desktop DESTINATION share/applications)
-    install(FILES src/images/ipbc.png DESTINATION share/pixmaps RENAME ipbc.png)
-    install(FILES copyright DESTINATION share/doc/ipbcwallet)
+    install(FILES src/bittube.desktop DESTINATION share/applications)
+    install(FILES src/images/bittube.png DESTINATION share/pixmaps RENAME bittube.png)
+    install(FILES copyright DESTINATION share/doc/bittubewallet)
 
     if (NOT RPMBUILD)
         set(CPACK_GENERATOR DEB)
@@ -306,7 +306,7 @@ elseif (UNIX)
         set(CPACK_DEBIAN_PACKAGE_MAINTAINER "${CPACK_PACKAGE_VENDOR} <hello@ipbc.io>")
         set(CPACK_DEBIAN_PACKAGE_SECTION Office)
         set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-        set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "IPBC Wallet
+        set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "BitTube Wallet
  IPCB is a decentralized, privacy oriented peer-to-peer
  cryptocurrency. It is open-source, nobody owns or controls IPCB
  and everyone can take part.")
@@ -318,10 +318,10 @@ set(CPACK_PACKAGE_FILE_NAME "${CPACK_DEBIAN_PACKAGE_NAME}-${CPACK_PACKAGE_VERSIO
         set(CPACK_RPM_PACKAGE_LICENSE "MIT")
         set(CPACK_RPM_PACKAGE_GROUP Office)
         set(CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.3.2, qt5-qtbase-gui >= 5.3.2")
-        set(CPACK_RPM_PACKAGE_SUMMARY "IPBC Wallet")
-        set(CPACK_RPM_PACKAGE_DESCRIPTION "IPBC Wallet
+        set(CPACK_RPM_PACKAGE_SUMMARY "BitTube Wallet")
+        set(CPACK_RPM_PACKAGE_DESCRIPTION "BitTube Wallet
  IPCB is a decentralized, privacy oriented peer-to-peer
- cryptocurrency. It is open-source, nobody owns or controls IPBC
+ cryptocurrency. It is open-source, nobody owns or controls BitTube
  and everyone can take part.")
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${VERSION_RELEASE}${CPACK_SYSTEM_NAME}")
     endif ()

@@ -1,4 +1,4 @@
-// Copyright (c) 2016 The IPBC developers
+// Copyright (c) 2016-2018 The BitTube developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "Update.h"
@@ -66,7 +66,7 @@ void Updater::checkForUpdate()
     //{
         connect(manager, SIGNAL(finished(QNetworkReply*)),
                 this, SLOT(replyFinished(QNetworkReply*)));
-        manager->get(QNetworkRequest(QUrl(IPBCCOIN_UPDATE_URL)));
+        manager->get(QNetworkRequest(QUrl(BITTUBE_UPDATE_URL)));
     //}
 	//else {
 		//QMessageBox::information(nullptr, tr("LOL"), "No network", QMessageBox::Ok);
@@ -91,7 +91,7 @@ void Updater::replyFinished (QNetworkReply *reply)
          if (ourVersion < remoteVersion) {
 
              if (QMessageBox::warning(nullptr, QObject::tr("New version available"), QObject::tr("There is update available.\nDo you want to go to download page?"), QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) {
-                 QString link = "https://ipbc.io/wallet";
+                 QString link = "https://coin.bit.tube/wallet";
                  QDesktopServices::openUrl(QUrl(link));
              }
 

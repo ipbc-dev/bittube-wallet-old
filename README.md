@@ -6,7 +6,7 @@ Compilation instructions
 **1. Clone this repository, with submodules.**
 
 ```
-git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
+git clone --recurse-submodules https://github.com/ipbc-dev/bittube-wallet.git
 ```
 
 **2. Install Boost where CMake can find it. For example you could download the [Precompiled Windows Binaries Package Here](https://sourceforge.net/projects/boost/files/boost-binaries/1.66.0/boost_1_66_0-bin-msvc-all-32-64.7z/download) and extract it to "C:\Program Files\boost"**
@@ -21,14 +21,14 @@ git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
 mkdir build && cd build && cmake ..
 ```
 
-**6. Open the ipbc.sln in Visual Studio and Compile it.**
+**6. Open the bittube-wallet.sln in Visual Studio and Compile it.**
 
 ### Linux
 
 **1. Clone this repository, with submodules.**
 
 ```
-git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
+git clone --recurse-submodules https://github.com/ipbc-dev/bittube-wallet.git
 ```
 
 **2. Install dependencies. For example using Apt:**
@@ -54,7 +54,7 @@ xcode-select —install
 **2. Clone this repository, with submodules.**
 
 ```
-git clone --recurse-submodules https://github.com/ipbc-dev/ipbc-wallet.git
+git clone --recurse-submodules https://github.com/ipbc-dev/bittube-wallet.git
 ```
 
 **3. Install Boost. For example using homebrew.**

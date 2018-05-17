@@ -1,4 +1,4 @@
-// Copyright (c) 2016 The IPBC developers
+// Copyright (c) 2016-2018 The BitTube developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef UPDATE_H
@@ -10,7 +10,7 @@
 #include <QNetworkReply>
 #include <QUrl>
 
-const static QString IPBCCOIN_UPDATE_URL = "http://ftp.ipbc.io/IPBC-Wallet/version.txt";
+const static QString BITTUBE_UPDATE_URL = "http://ftp.ipbc.io/IPBC-Wallet/version.txt";
 
 class Updater : public QObject
 {

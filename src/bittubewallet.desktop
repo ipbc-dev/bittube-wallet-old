@@ -1,0 +1,18 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitTube-Wallet
+GenericName=BitTube-Wallet
+Name[uk]=BitTube-Wallet
+Name[de]=BitTube-Wallet
+Name[es]=BitTube-Wallet
+Comment=BitTube-Wallet
+Comment[uk]=BitTube-Wallet
+Comment[de]=BitTube-Wallet
+Comment[es]=BitTube-Wallet
+Exec=BitTube %U
+Terminal=false
+Type=Application
+Icon=BitTube
+MimeType=x-scheme-handler/BitTube;
+Categories=Office;Finance;
+Version=1.2.0
