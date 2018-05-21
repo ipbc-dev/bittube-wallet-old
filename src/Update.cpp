@@ -85,7 +85,7 @@ void Updater::replyFinished (QNetworkReply *reply)
     else
     {
         Version ourVersion = Settings::instance().getVersion().split("-")[0].toStdString();
-		Version remoteVersion = "0.0.0";
+		Version remoteVersion = std::string("0.0.0");
 
 		// QString result = reply->readAll().data();
 		// Version remoteVersion = result.toStdString();
