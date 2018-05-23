@@ -1543,8 +1543,8 @@ Sind Sie sicher?</translation>
         <translation type="vanished">%1 Brieftasche %2</translation>
     </message>
     <message>
-        <source>More info can be found at Bit.tube in Documentation section</source>
-        <translation>Weitere Informationen finden Sie unter Bit.tube im Abschnitt Dokumentation</translation>
+        <source>More info can be found at &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</source>
+        <translation>Weitere Informationen finden Sie unter &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Connection settings changed</source>

@@ -1538,8 +1538,8 @@ Jesteś pewien?</translation>
         <translation type="vanished">%1waniec v. %2</translation>
     </message>
     <message>
-        <source>More info can be found at Bit.tube in Documentation section</source>
-        <translation>Więcej informacji można znaleźć na stronie Bit.tube w sekcji Dokumentacja</translation>
+        <source>More info can be found at &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</source>
+        <translation>Więcej informacji można znaleźć na stronie &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Connection settings changed</source>

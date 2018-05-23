@@ -1547,8 +1547,8 @@ Are you sure?</source>
         <translation type="vanished">%1 Monedero %2</translation>
     </message>
     <message>
-        <source>More info can be found at Bit.tube in Documentation section</source>
-        <translation>Se puede encontrar más información en Bit.tube en la sección Documentación</translation>
+        <source>More info can be found at &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</source>
+        <translation>Se puede encontrar más información en &lt;a href='https://coin.bit.tube/guides/'&gt;https://coin.bit.tube/guides/&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
