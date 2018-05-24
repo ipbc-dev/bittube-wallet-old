@@ -18,6 +18,7 @@
     <file alias="receive">icons/receive.png</file>
     <file alias="transactions">icons/transactions.png</file>
     <file alias="send">icons/send.png</file>
+    <file alias="send_confirm">icons/send_confirm.png</file>
     <file alias="overview">icons/overview.png</file>
     <file alias="clock1">icons/clock1.png</file>
     <file alias="clock2">icons/clock2.png</file>
