@@ -1538,8 +1538,8 @@ Are you sure?</source>
         <translation type="vanished">Карбованець в. %2 (%1)</translation>
     </message>
     <message>
-        <source>More info can be found at BitTube.io in Documentation section</source>
-        <translation>Больш інфармацыі на сайце BitTube.io у раздзеле Дакументацыя.</translation>
+        <source>More info can be found at Bit.tube in Documentation section</source>
+        <translation>Больш інфармацыі на сайце Bit.tube у раздзеле Дакументацыя.</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
