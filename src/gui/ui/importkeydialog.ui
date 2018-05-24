@@ -29,6 +29,13 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QTextEdit" name="m_keyEdit">
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="2">
       <widget class="QToolButton" name="m_selectPathButton">
        <property name="text">
@@ -45,13 +52,6 @@
      </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="m_pathEdit"/>
-     </item>
-     <item row="0" column="1" colspan="2">
-      <widget class="QTextEdit" name="m_keyEdit">
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-      </widget>
      </item>
     </layout>
    </item>
