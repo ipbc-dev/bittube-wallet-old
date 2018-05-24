@@ -17,7 +17,7 @@ ConfirmSendDialog::~ConfirmSendDialog() {
 }
 
 void ConfirmSendDialog::showPasymentDetails(quint64 _total) {
-    setWindowTitle(QString(tr("Confirm sending %1 BitTube")).arg(CurrencyAdapter::instance().formatAmount(_total)));
+    setWindowTitle(QString(tr("Confirm sending %1 TUBE")).arg(CurrencyAdapter::instance().formatAmount(_total)));
     QString amountText = m_ui->m_confirmLabel->text();
     m_ui->m_confirmLabel->setText(amountText.arg(CurrencyAdapter::instance().formatAmount(_total)));
 }

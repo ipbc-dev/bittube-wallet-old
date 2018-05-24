@@ -198,11 +198,11 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
+        <source>Confirm sending %1 TUBE</source>
         <translation>Пацверджанне адпраўкі %1 крб.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Жадаеце выслаць &lt;strong&gt;%1 крб.&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -1393,7 +1393,7 @@ Do you want to go to download page?</source>
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
+        <source>Confirm sending %1 TUBE</source>
         <translation>Пацвердзіце адпраўку %1 крб.</translation>
     </message>
     <message>

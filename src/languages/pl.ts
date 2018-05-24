@@ -198,12 +198,12 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation>Potwierdź wysłanie %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation>Potwierdź wysłanie %1 TUBE</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Czy na pewno chcesz wysłać &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Czy na pewno chcesz wysłać &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1393,8 +1393,8 @@ Czy chesz otworzyć stronę pobierania w przeglądarce?</translation>
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation>Potwierdź wysłanie %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation>Potwierdź wysłanie %1 TUBE</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>

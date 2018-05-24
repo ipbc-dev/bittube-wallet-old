@@ -198,14 +198,14 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Comfirm sending %1 BitTube</source>
+        <source>Comfirm sending %1 TUBE</source>
         <translatorcomment>Ошибка в английском слове Comfirm (правильно Confirm)</translatorcomment>
-        <translation type="vanished">Confirma el envío de %1 BitTube</translation>
+        <translation type="vanished">Confirma el envío de %1 TUBE</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>Нужно добавить  знак &quot;¿&quot; перед вопросом</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que quieres enviar &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que quieres enviar &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -216,8 +216,8 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation type="unfinished">Confirma el envío de %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation type="unfinished">Confirma el envío de %1 TUBE</translation>
     </message>
 </context>
 <context>
@@ -1400,8 +1400,8 @@ Do you want to go to download page?</source>
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation>Confirma el envío de %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation>Confirma el envío de %1 TUBE</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>

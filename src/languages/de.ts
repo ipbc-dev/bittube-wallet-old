@@ -198,13 +198,13 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Comfirm sending %1 BitTube</source>
-        <translation type="vanished">Senden bestätigen %1 BitTube</translation>
+        <source>Comfirm sending %1 TUBE</source>
+        <translation type="vanished">Senden bestätigen %1 TUBE</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sind Sie sicher das Sie den Betrag senden möchtest&lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 BitTube&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sind Sie sicher das Sie den Betrag senden möchtest&lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 TUBE&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -215,8 +215,8 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation type="unfinished">Bestätige senden %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation type="unfinished">Bestätige senden %1 TUBE</translation>
     </message>
 </context>
 <context>
@@ -1398,8 +1398,8 @@ Externer Port für das P2P-Netzwerkprotokoll (wenn Portweiterleitung mit NAT ver
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 BitTube</source>
-        <translation>Bestätige senden %1 BitTube</translation>
+        <source>Confirm sending %1 TUBE</source>
+        <translation>Bestätige senden %1 TUBE</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
